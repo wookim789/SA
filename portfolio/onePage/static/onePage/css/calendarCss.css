@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+
+.date:hover{ 
+	
+}
+.dateButton{
+	width: 70px;
+	height: 30px;
+}
+#calendarDiv {
+	text-align: left;
+	padding: 0px 30px 10px 10px;
+	margin:  0px 30px 10px 10px;
+	width: 50%;
+}
+#sun{
+	color: rgb(178, 83, 53);
+}
+#sat{
+	color: rgb(71, 178, 151);
+}
+#calendar {
+	text-align: left;
+	background-color: white;
+}
+
+.goodBut{
+	width: 70px;
+	height: 30px;
+}
+table {
+	border-spacing: 0px;
+	border-collapse: separate;
+}
+
+#cal {
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	border: solid;
+	border-width: 0.5px; border-color : rgb( 180, 204, 202);
+	border-spacing: 0px;
+	border-collapse: separate;
+	border-color: rgb(180, 204, 202);
+}
+
+#cal th {
+	padding: 10px 0px 10px 0px;
+	line-height: 0px;
+}
+
+#cal td {
+	width: 13%;
+	height: 0px;
+	padding: 0px 80px 60px 0;
+	border: solid;
+	border-color: rgb(180, 204, 202);
+	border-width: 0.3px;
+	background-color: white;
+	vertical-align: top;
+	height: 0px;
+}
