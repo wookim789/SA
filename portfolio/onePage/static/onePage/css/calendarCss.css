@@ -40,15 +40,16 @@ table {
 	padding: 0px;
 	margin: 0px;
 	border: solid;
-	border-width: 0.5px; border-color : rgb( 180, 204, 202);
+	border-width: 0.5px;
 	border-spacing: 0px;
 	border-collapse: separate;
 	border-color: rgb(180, 204, 202);
 }
 
-#cal th {
+#cal thead tr th {
 	padding: 10px 0px 10px 0px;
 	line-height: 0px;
+	background-color : white;
 }
 
 #cal td {

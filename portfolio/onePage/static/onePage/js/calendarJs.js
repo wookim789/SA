@@ -336,12 +336,13 @@ function Calendar() {
 function calcCalendar(year, month) {
 	var calendar = new Calendar();
 	var calendarDiv = document.getElementById('calendar');
-	var html = '<table id="cal"><tr id = "calendarHead"><th id = "sun">Sun</th><th>Mon</th><th>Tue</th><th>Wen</th><th>Thu</th><th>Fri</th><th id = "sat">Sat</th></tr><tr>';
+	var html = '<table class ="table table-hover" id="cal"><thead><tr id = "calendarHead"><th id = "sun">Sun</th><th>Mon</th><th>Tue</th><th>Wen</th><th>Thu</th><th>Fri</th><th id = "sat">Sat</th></tr></thead>';
 	// 계산하고자 하는 연도와 월을 날짜 객체에 지정
 	dt.setYear(Number(year));
 	dt.setMonth(Number(month) - 1);
 	var totMonth = calendar.totMonthDay(month, calendar.calYun(year));
 	// 날짜 표시 반복문
+	html += '<tbody>'
 	for (var day = 1; day <= totMonth; day++) {
 		dt.setDate(day);
 
@@ -356,16 +357,16 @@ function calcCalendar(year, month) {
 			html += '<td class = "date" id = "dateTd' + String(day)
 					+ '" value = ' + String(day) + ' onmouseover = "showBut('
 					+ String(day) + ')" onmouseout = "hiddenBut(' + String(day)
-					+ ')">' + String(day)
-					+ '<button class= "goodBut" id = "dateButton' + String(day)
+					+ ')">' + String(day) + '<br/>'
+					+ '<button class= "goodBut btn btn-primary" id = "dateButton' + String(day)
 					+ '" value =' + String(day) + '>' + "좋아요" + '</button>'
 					+ '</td>';
 		} else {
 			html += '<td class = "date" id = "dateTd' + String(day)
 					+ '" value = ' + String(day) + ' onmouseover = "showBut('
 					+ String(day) + ')" onmouseout = "hiddenBut(' + String(day)
-					+ ')">' + String(day)
-					+ '<button class= "goodBut" id = "dateButton' + String(day)
+					+ ')">' + String(day) + '<br/>'
+					+ '<button class= "goodBut btn btn-primary" id = "dateButton' + String(day)
 					+ '"  value =' + String(day) + '>' + '좋아요' + '</button>'
 					+ '</td></tr>' + '<tr>';
 		}
@@ -381,6 +382,7 @@ function calcCalendar(year, month) {
 	}
 
 	html += '</table>'
+
 	calendarDiv.innerHTML = html;
 }
 

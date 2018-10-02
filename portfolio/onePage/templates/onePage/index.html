@@ -16,14 +16,17 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Raleway:400,300,700" rel="stylesheet">
 
-  <!-- Bootstrap CSS File -->
-  <link href='{% static "onePage/lib/bootstrap/css/bootstrap.min.css"%}' rel="stylesheet">
-
   <!-- Main Stylesheet File -->
   <link href='{% static "onePage/css/style.css"%}' rel="stylesheet">
 
 
   <link href='{%static "onePage/css/calendarCss.css"%}' rel="stylesheet" />
+
+  
+  <!-- Bootstrap CSS File -->
+  <link href='{% static "onePage/lib/bootstrap/css/bootstrap.min.css"%}' rel="stylesheet">
+
+
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
   <script src = '{%static "onePage/js/calendarJs.js"%}'></script>
   <!-- =======================================================
@@ -67,12 +70,11 @@
   <section id="home" name="home"></section>
   <div id="headerwrap">
     <div class="container">
-      <div class="col-lg-8">
-        <h1>Hello. I'm wooKim. Thank you for your visit.</h1>
+      <div>
+        <h1>Hello. I'm wooKim.</h1> 
+        <h1>Thank you for your visit.</h1>
       </div>
-      <div class="col-lg-4">
       </div>
-    </div>
     <!-- /container -->
   </div>
   <!-- /headerwrap -->
@@ -156,22 +158,15 @@
                   <td>
                     <div id="nowMonth"></div>
                   </td>
+                  <td> </td>
+                  <td> 
+                    <form>
+                    <input type = "button" id = "save" value="저장하기" />
+                  </form>
+                </td>
                 </tr>
               </table>
             </div>
-          
-            <div>
-            <!-- <%
-              if(role==0 || role ==1){
-            %>		 -->
-              <form>
-                <input type = "button" id = "save" value="저장하기" />
-              </form>
-            <!-- <% 
-              }
-            %> -->
-            </div>
-          
             <div>
                <script type="text/javascript">
                </script>

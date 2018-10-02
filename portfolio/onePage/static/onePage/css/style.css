@@ -18,7 +18,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Raleway;
-  font-weight: 300;
+  font-weight: 400;
   color: #333
 }
 
@@ -94,11 +94,14 @@ hr {
 }
 
 #headerwrap h1 {
-  font-weight: 400;
-  font-size: 70px;
+  text-align: center;
+  font-weight: 100%;
+  font-size: 60px;
   color: #fff
 }
 .container{
+  text-align: center;
+  margin:auto;
   width: 60%;
   height: 90%;
 }
@@ -306,7 +309,7 @@ hr {
 }
 
 .accordion-heading {
-  margin-top: :30px;
+  margin-top: 30px;
   padding-bottom: 10px;
   text-align: left;
   border-bottom: 1px solid #ccc
@@ -356,7 +359,6 @@ hr {
 
 .form-group label {
   font-family: Raleway;
-  sans-serif;
   font-size: 16px;
   font-weight: 300
 }
