@@ -336,7 +336,7 @@ function Calendar() {
 function calcCalendar(year, month) {
 	var calendar = new Calendar();
 	var calendarDiv = document.getElementById('calendar');
-	var html = '<table class ="table table-hover" id="cal"><thead><tr id = "calendarHead"><th id = "sun">Sun</th><th>Mon</th><th>Tue</th><th>Wen</th><th>Thu</th><th>Fri</th><th id = "sat">Sat</th></tr></thead>';
+	var html = '<table class ="table" id="cal"><thead><tr id = "calendarHead"><th id = "sun">Sun</th><th>Mon</th><th>Tue</th><th>Wen</th><th>Thu</th><th>Fri</th><th id = "sat">Sat</th></tr></thead>';
 	// 계산하고자 하는 연도와 월을 날짜 객체에 지정
 	dt.setYear(Number(year));
 	dt.setMonth(Number(month) - 1);
@@ -389,7 +389,7 @@ function calcCalendar(year, month) {
 // 현재 년도부터 10년치 년도 선택
 function selectYearList(year) {
 	// 현재 날짜 속성으로 지정
-	var html = '<select id = "yearList" onchange="selectYearChange()">';
+	var html = '<select class="form-control" id = "yearList" onchange="selectYearChange()">';
 	//dt = new Date();
 	year = year - 5;
 	for (var i = 0; i < 10; i++) {
@@ -407,7 +407,7 @@ function selectYearList(year) {
 
 // 현재 월 부터 12월 까지
 function selectMonthList(month) {
-	var html = '<select id = "monthList" onchange="selectMonthChange()">';
+	var html = '<select class="form-control" id = "monthList" onchange="selectMonthChange()">';
 	for (var i = 1; i <= 12; i++) {
 		if (i != month) {
 			html += '<option value = ' + i + '>' + i + '월' + '</option>';
@@ -470,7 +470,7 @@ function selectMonthChange() {
 
 // 달력 출력 함수
 function printYearMonth(year, month) {
-	var html = '<h3>' + String(year) + '년 ' + String(month) + '월' + '</h3>';
-	// console.log(html);
-	document.getElementById('calendarDiv').innerHTML = html;
+	// var html = '<h3>' + String(year) + '년 ' + String(month) + '월' + '</h3>';
+	// // console.log(html);
+	// document.getElementById('calendarDiv').innerHTML = html;
 }
