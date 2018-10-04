@@ -9,7 +9,7 @@ nowMonth = dt.getMonth()+1;
 nowDay = dt.getDate();
 //올해 년도 
 nowYear = dt.getFullYear();
-
+var userId=""
 $(document).ready(function() {
 	//달력 계산
 	calcCalendar(nowYear, nowMonth );
@@ -23,6 +23,14 @@ $(document).ready(function() {
 	hiddenAllBut();
 	//좋아요 버튼 눌렀을 때 년도 저장 하기 이벤트
 	clickBut();
+
+	$("#userIdSave").click(function(){
+		if ($("#userIdInput").val()!=""){
+			userId = $("#userIdInput").val();
+		}else{
+			alert("아이디를 입력하세요!")
+		}
+	})
 	
 	var year = String(nowYear).substring(2, 4);
 	//좋아요 및 좋아요 누른 회원 아이디 출력 함수
@@ -33,11 +41,11 @@ $(document).ready(function() {
 	//팀장 + 부팀장만 보이는 저장하기 버튼 이벤트
 	if ($("#save").length) {
 		$("#save").click(function() {
-			if ($("#save").val() == "저장하기") {
+			if ($("#save").val() == "일정확정") {
 				$("#save").val("취소");
 
 			} else {
-				$("#save").val("저장하기");
+				$("#save").val("일정확정");
 				// $(".date").css("background-color", "white");
 			}
 
@@ -98,7 +106,7 @@ function printSelectDateAjax(year, month) {
 	
 	//ajax 컨트롤러에서 데이터 받아와 아이디 뿌려주기
 	$.ajax({
-		url : 'getMemberId.mp',
+		url : '/onePage/getMemberId/',
 		type : 'POST',
 		dataType : "json",
 		contentType : 'application/x-www-form-urlencoded; charest=utf-8',
@@ -116,12 +124,12 @@ function printSelectDateAjax(year, month) {
 						//배열에 날짜 삽입
 						dayList.push(day);
 						//태그에 id 삽입
-						output+=String(item.id);
+						output+=String(item.userId);
 						output+="<br/>"
 					//처음 실행이 아니고, 배열에 넣은 날짜와 지금 읽은 day값 비교하여 같을 때 (같은 날을 추가 한 유저가 아직 있을 때)
 					}else if(day == dayList[dayList.length-1]){
 						dayList.push(day);
-						output+=String(item.id);
+						output+=String(item.userId);
 						output+="<br/>"
 					//처음 실행이 아니고,배열에 넣은 날짜와 지금 읽은 day값 비교하여 다를 때(같은 날을 추가한 유저가 없을 때)
 					}else if(day != dayList[dayList.length-1]){
@@ -130,7 +138,7 @@ function printSelectDateAjax(year, month) {
 						$("#dateTd"+ dayList[dayList.length-1]).append(output);
 						dayList.push(day);
 						output = "<div class = 'id'>"
-						output+=String(item.id);
+						output+=String(item.userId);
 						output+="<br/>"
 					}
 				}
@@ -147,7 +155,7 @@ function printSelectDateAjax(year, month) {
 	})
 	//디비에 저장된 좋아요 수 읽어와 태그에 +n 추가하기
 	$.ajax({
-		url : 'loadCalendar.mp',
+		url : '/onePage/loadCalendar/',
 		type : 'POST',
 		dataType : "json",
 		contentType : 'application/x-www-form-urlencoded; charest=utf-8',
@@ -173,7 +181,6 @@ function printSelectDateAjax(year, month) {
 			});
 		},
 		error : function() {
-
 			alert("통신실패");
 		}
 	});
@@ -227,15 +234,16 @@ function clickBut() {
 					}
 					
 					//저장하기 버튼이 없거나, 저장하기 버튼이 있어도 눌르지 않았을 때
-					if (!$("#save").length || $("#save").val() == "저장하기") {
+					if ((!$("#save").length || $("#save").val() == "일정확정") && userId!="") {
 						//
 						$.ajax({
-								url : "selectCalendar.mp",
+								url : "/onePage/selectCalendar/",
 								type : "POST",
 								contentType : 'application/x-www-form-urlencoded; charsert=utf-8',
 								dataType : "json",
 								data : {
-									"selectDate" : date
+									"selectDate" : date,
+									"userId " : userId
 								},
 								success : function(map) {
 									//좋아요 누른 수 보여주는 메소드 + 누른 아이디 보여주는 메소드
@@ -246,7 +254,7 @@ function clickBut() {
 								}
 							})
 					//저장하기 버튼이 있고, 한번 눌렀을 때
-					} else {
+					} else if(userId!=""){
 						//일정 확정하기 버튼을 눌렀을 때 해당 버튼의 번호 가져오기
 						var num = $(this).attr("value");
 						//만약 누른 버튼의 바탕 색이 초록색이 아니면 (일정확정 안한 날 -일정 저장)
@@ -255,12 +263,13 @@ function clickBut() {
 							$("#dateTd" + num).css("background-color","green");
 							//ajax로 선택한 날 서버로 전송하기
 							$.ajax({
-									url : "fixcal.mp",
+									url : "/onePage/fixcal/",
 									type : "POST",
 									contentType : 'application/x-www-form-urlencoded; charsert=utf-8',
 									dataType : "json",
 									data : {
-										"selectDate" : date
+										"selectDate" : date,
+										"userId " : userId
 									},
 									success : function(map) {
 										// alert(map.res);
@@ -275,11 +284,12 @@ function clickBut() {
 							$("#dateTd" + num).css("background-color","white");
 							//ajax로 선택한 날 서버로 전송
 							$.ajax({
-									url : "fixcal.mp",
+									url : "/onePage/fixcal/",
 									type : "POST",
 									contentType : 'application/x-www-form-urlencoded; charsert=utf-8',
 									dataType : "json",
-									data : {"selectDate" : date},
+									data : {"selectDate" : date,
+										"userId " : userId},
 									success : function(map) {
 										// alert(map.res);
 									},
@@ -288,6 +298,8 @@ function clickBut() {
 									}
 								})
 							}
+						}else{
+							alert("아이디를 입력하세요!")
 						}
 					});
 }
