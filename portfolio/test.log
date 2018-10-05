@@ -1,0 +1,166 @@
+DEBUG:root:index***********************************************************************
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+DEBUG:root:getMemebID***********************************************************************
+DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+DEBUG:root:index***********************************************************************
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+DEBUG:root:getMemebID***********************************************************************
+DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:getMemebID***********************************************************************
+DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:getMemebID***********************************************************************
+DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:getMemebID***********************************************************************
+DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:getMemebID***********************************************************************
+DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:getMemebID***********************************************************************
+DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:index***********************************************************************
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+DEBUG:root:getMemebID***********************************************************************
+DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:getMemebID***********************************************************************
+DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:index***********************************************************************
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+DEBUG:root:getMemebID***********************************************************************
+DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:index***********************************************************************
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /js/main.js
+DEBUG:root:getMemebID***********************************************************************
+DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg

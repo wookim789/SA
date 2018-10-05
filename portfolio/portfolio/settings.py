@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'onePage',
+    'debug_toolbar',
+    
 
 ]
 
@@ -49,9 +51,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 
 ]
-
+INTERNAL_IPS = ('127.0.0.1',)
 ROOT_URLCONF = 'portfolio.urls'
 
 TEMPLATES = [
@@ -121,3 +124,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+CONFIG_DEFAULTS = {
+    # Toolbar options
+    'RESULTS_CACHE_SIZE': 100,
+    'SHOW_COLLAPSED': True,
+    # Panel options
+    'SQL_WARNING_THRESHOLD': 100,   # milliseconds
+    'NUM_WORKERS': 2,
+}

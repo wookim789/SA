@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class selectDate(models.Model):
+class SelectDate(models.Model):
     userId = models.CharField(max_length=10)
     selectDate = models.CharField(max_length=10)
     dateCount = models.IntegerField(default=0)
