@@ -1,6 +1,5 @@
 /* @author wookim
 <<<<<<< HEAD
-
  */
 dt = new Date();
 //현재 달
@@ -25,7 +24,7 @@ $(document).ready(function () {
 	clickBut();
 
 	$("#userIdSave").click(function () {
-		if ($("#userIdInput").val() != "") {
+		if ($("#userIdInput").val() != ""|| userId == '') {
 			userId = $("#userIdInput").val();
 		} else {
 			alert("아이디를 입력하세요!")
@@ -238,6 +237,8 @@ function clickBut() {
 		//저장하기 버튼이 없거나, 저장하기 버튼이 있어도 눌르지 않았을 때
 		if ((!$("#save").length || $("#save").val() == "일정확정") && userId != "") {
 			//
+			console.log(userId);
+			var ID = userId;
 			$.ajax({
 				url: "/onePage/selectCalendar/",
 				type: "POST",
@@ -245,7 +246,7 @@ function clickBut() {
 				dataType: "json",
 				data: {
 					"selectDate": date,
-					"userId ": userId
+					"user_ID": ID
 				},
 				success: function (map) {
 					//좋아요 누른 수 보여주는 메소드 + 누른 아이디 보여주는 메소드

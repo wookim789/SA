@@ -54,15 +54,26 @@ def loadCalendar(request):
     return JsonResponse(result, safe=False)
 
 
+@csrf_exempt
 def selectCalendar(request):
+    # logging.debug(request)
+    logging.debug(request.POST['selectDate'])
+    logging.debug(request.POST.get('user_ID'))
+
     beModel = models.SelectDate.objects.filter(
-        SelectDate=request['selectDate'])
+        selectDate=request.POST['selectDate'])
+
+    cnt = 0
     for i in beModel:
         cnt = i.dateCount + 1
         break
-    model = models.SelectDate(userId=request.userId,
-                              selectDate=request.date,
+    if cnt == 0:
+        cnt = 1
+    model = models.SelectDate(userId=request.POST.get('user_ID'),
+                              selectDate=request.POST['selectDate'],
                               dateCount=cnt,
                               confirmIndicator=0)
     model.save()
-    beModel.objects.all().update(dateCount=cnt)
+    beModel.update(dateCount=cnt)
+    answer = {"requset": True}
+    return JsonResponse(answer)
