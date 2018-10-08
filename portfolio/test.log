@@ -1,367 +1,254 @@
-DEBUG:root:index***********************************************************************
-WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
 WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
 WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
-WARNING:django.request:Not Found: /img/avatar.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
 WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
 WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
 WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
 WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
 WARNING:django.request:Not Found: /lib/easing/easing.min.js
-WARNING:django.request:Not Found: /lib/classie/classie.js
 WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
 WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
 WARNING:django.request:Not Found: /js/main.js
-WARNING:django.request:Not Found: /lib/classie/classie.js
-WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
 WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
 WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
-WARNING:django.request:Not Found: /js/main.js
-DEBUG:root:getMemebID***********************************************************************
-DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
-DEBUG:root:18/10/02
-DEBUG:root:None
+WARNING:django.request:Not Found: /img/avatar.jpg
+DEBUG:root:<QuerySet []>
 ERROR:django.request:Internal Server Error: /onePage/selectCalendar/
 Traceback (most recent call last):
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\sqlite3\base.py", line 296, in execute
-    return Database.Cursor.execute(self, query, params)
-sqlite3.IntegrityError: NOT NULL constraint failed: onePage_selectdate.userId
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
     response = get_response(request)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
     return view_func(*args, **kwargs)
-  File "C:\Users\rediron\Desktop\protfolio\SA\portfolio\onePage\views.py", line 76, in selectCalendar
-    model.save()
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\base.py", line 718, in save
-    force_update=force_update, update_fields=update_fields)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\base.py", line 748, in save_base
-    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\base.py", line 831, in _save_table
-    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
-    using=using, raw=raw)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 1136, in _insert
-    return query.get_compiler(using=using).execute_sql(return_id)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1289, in execute_sql
-    cursor.execute(sql, params)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 100, in execute
-    return super().execute(sql, params)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 68, in execute
-    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
-    return executor(sql, params, many, context)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\utils.py", line 89, in __exit__
-    raise dj_exc_value.with_traceback(traceback) from exc_value
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\sqlite3\base.py", line 296, in execute
-    return Database.Cursor.execute(self, query, params)
-django.db.utils.IntegrityError: NOT NULL constraint failed: onePage_selectdate.userId
-DEBUG:root:index***********************************************************************
+  File "C:\Users\Playdata\Desktop\port\SA\portfolio\onePage\views.py", line 62, in selectCalendar
+    if bemodel[0].userId is None:
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 303, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
 WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
 WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
 WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
-WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
 WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
 WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
-WARNING:django.request:Not Found: /lib/easing/easing.min.js
-WARNING:django.request:Not Found: /lib/classie/classie.js
-WARNING:django.request:Not Found: /js/main.js
 WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
 WARNING:django.request:Not Found: /lib/chart/chart.js
 WARNING:django.request:Not Found: /lib/classie/classie.js
-WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
-WARNING:django.request:Not Found: /img/avatar.jpg
-WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
-WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
 WARNING:django.request:Not Found: /js/main.js
-DEBUG:root:getMemebID***********************************************************************
-DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
-DEBUG:root:18/10/03
-DEBUG:root:None
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+DEBUG:root:<QuerySet []>
 ERROR:django.request:Internal Server Error: /onePage/selectCalendar/
 Traceback (most recent call last):
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\sqlite3\base.py", line 296, in execute
-    return Database.Cursor.execute(self, query, params)
-sqlite3.IntegrityError: NOT NULL constraint failed: onePage_selectdate.userId
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
     response = get_response(request)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
     return view_func(*args, **kwargs)
-  File "C:\Users\rediron\Desktop\protfolio\SA\portfolio\onePage\views.py", line 76, in selectCalendar
-    model.save()
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\base.py", line 718, in save
-    force_update=force_update, update_fields=update_fields)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\base.py", line 748, in save_base
-    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\base.py", line 831, in _save_table
-    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
-    using=using, raw=raw)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 1136, in _insert
-    return query.get_compiler(using=using).execute_sql(return_id)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1289, in execute_sql
-    cursor.execute(sql, params)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 100, in execute
-    return super().execute(sql, params)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 68, in execute
-    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
-    return executor(sql, params, many, context)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\utils.py", line 89, in __exit__
-    raise dj_exc_value.with_traceback(traceback) from exc_value
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\sqlite3\base.py", line 296, in execute
-    return Database.Cursor.execute(self, query, params)
-django.db.utils.IntegrityError: NOT NULL constraint failed: onePage_selectdate.userId
-DEBUG:root:index***********************************************************************
-WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
-WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
-WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
-WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
-WARNING:django.request:Not Found: /lib/easing/easing.min.js
-WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
-WARNING:django.request:Not Found: /lib/chart/chart.js
-WARNING:django.request:Not Found: /lib/classie/classie.js
-WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
-WARNING:django.request:Not Found: /js/main.js
-WARNING:django.request:Not Found: /lib/easing/easing.min.js
-WARNING:django.request:Not Found: /lib/chart/chart.js
-WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
-WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
-WARNING:django.request:Not Found: /lib/classie/classie.js
-WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
-WARNING:django.request:Not Found: /js/main.js
-WARNING:django.request:Not Found: /img/avatar.jpg
-DEBUG:root:getMemebID***********************************************************************
-DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}]
-DEBUG:root:18/10/03
-DEBUG:root:asdasd
+  File "C:\Users\Playdata\Desktop\port\SA\portfolio\onePage\views.py", line 62, in selectCalendar
+    if bemodel[0] is None:
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 303, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+DEBUG:root:<QuerySet []>
 ERROR:django.request:Internal Server Error: /onePage/selectCalendar/
 Traceback (most recent call last):
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
     response = get_response(request)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
     return view_func(*args, **kwargs)
-  File "C:\Users\rediron\Desktop\protfolio\SA\portfolio\onePage\views.py", line 77, in selectCalendar
-    beModel.objects.all().update(dateCount=cnt)
-AttributeError: 'QuerySet' object has no attribute 'objects'
-DEBUG:root:index***********************************************************************
-WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+  File "C:\Users\Playdata\Desktop\port\SA\portfolio\onePage\views.py", line 62, in selectCalendar
+    if bemodel[0] is None:
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 303, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
 WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
 WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (127)>]>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (128)>]>
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
 WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
 WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
 WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
 WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
-WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
 WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
-WARNING:django.request:Not Found: /lib/chart/chart.js
 WARNING:django.request:Not Found: /js/main.js
 WARNING:django.request:Not Found: /lib/easing/easing.min.js
-WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
-WARNING:django.request:Not Found: /lib/classie/classie.js
 WARNING:django.request:Not Found: /lib/chart/chart.js
-WARNING:django.request:Not Found: /lib/classie/classie.js
 WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
 WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
 WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
 WARNING:django.request:Not Found: /js/main.js
 WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
-DEBUG:root:getMemebID***********************************************************************
-DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}]
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}]
-DEBUG:root:18/10/02
-DEBUG:root:asdasd
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (129)>]>
 ERROR:django.request:Internal Server Error: /onePage/selectCalendar/
 Traceback (most recent call last):
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
     response = get_response(request)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
     return view_func(*args, **kwargs)
-  File "C:\Users\rediron\Desktop\protfolio\SA\portfolio\onePage\views.py", line 78, in selectCalendar
-    beModel.save()
-AttributeError: 'QuerySet' object has no attribute 'save'
-DEBUG:root:index***********************************************************************
-WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
-WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
-WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
-WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
-WARNING:django.request:Not Found: /lib/easing/easing.min.js
-WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
-WARNING:django.request:Not Found: /lib/chart/chart.js
-WARNING:django.request:Not Found: /lib/classie/classie.js
-WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
-WARNING:django.request:Not Found: /js/main.js
-WARNING:django.request:Not Found: /lib/easing/easing.min.js
-WARNING:django.request:Not Found: /img/avatar.jpg
-WARNING:django.request:Not Found: /lib/chart/chart.js
-WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
-WARNING:django.request:Not Found: /lib/classie/classie.js
-WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
-WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
-WARNING:django.request:Not Found: /js/main.js
-DEBUG:root:getMemebID***********************************************************************
-DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}]
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}]
-DEBUG:root:18/10/01
-DEBUG:root:asdasd
+  File "C:\Users\Playdata\Desktop\port\SA\portfolio\onePage\views.py", line 79, in selectCalendar
+    cnt = bemodel.dateCount - 1
+AttributeError: 'QuerySet' object has no attribute 'dateCount'
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (129)>]>
 ERROR:django.request:Internal Server Error: /onePage/selectCalendar/
 Traceback (most recent call last):
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
     response = get_response(request)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 137, in _get_response
-    "returned None instead." % (callback.__module__, view_name)
-ValueError: The view onePage.views.selectCalendar didn't return an HttpResponse object. It returned None instead.
-DEBUG:root:index***********************************************************************
-WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
-WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
-WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
-WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
-WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
-WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
-WARNING:django.request:Not Found: /lib/easing/easing.min.js
-WARNING:django.request:Not Found: /lib/chart/chart.js
-WARNING:django.request:Not Found: /lib/classie/classie.js
-WARNING:django.request:Not Found: /js/main.js
-WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
-WARNING:django.request:Not Found: /js/main.js
-WARNING:django.request:Not Found: /img/avatar.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
-DEBUG:root:getMemebID***********************************************************************
-DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/01', 'dateCount': 1, 'confirmIndicator': 0}]
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/01', 'dateCount': 1, 'confirmIndicator': 0}]
-WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
-DEBUG:root:18/10/01
-DEBUG:root:asdvasdvasdvasdvas
-ERROR:django.request:Internal Server Error: /onePage/selectCalendar/
-Traceback (most recent call last):
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
-    response = get_response(request)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
-    response = self.process_response(request, response)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
-    if response.get('X-Frame-Options') is not None:
-AttributeError: 'bool' object has no attribute 'get'
-DEBUG:root:index***********************************************************************
-WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
-WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
-WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
-WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
-WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
-WARNING:django.request:Not Found: /lib/classie/classie.js
-WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
-WARNING:django.request:Not Found: /lib/chart/chart.js
-WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
-WARNING:django.request:Not Found: /lib/easing/easing.min.js
-WARNING:django.request:Not Found: /js/main.js
-WARNING:django.request:Not Found: /lib/chart/chart.js
-WARNING:django.request:Not Found: /img/avatar.jpg
-WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
-WARNING:django.request:Not Found: /lib/classie/classie.js
-WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
-WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
-WARNING:django.request:Not Found: /js/main.js
-DEBUG:root:getMemebID***********************************************************************
-DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'asdvasdvasdvasdvas', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}]
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}]
-DEBUG:root:18/10/09
-DEBUG:root:czxcz
-ERROR:django.request:Internal Server Error: /onePage/selectCalendar/
-Traceback (most recent call last):
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
-    response = get_response(request)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
     return view_func(*args, **kwargs)
-  File "C:\Users\rediron\Desktop\protfolio\SA\portfolio\onePage\views.py", line 78, in selectCalendar
-    return JsonResponse(True)
-  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\http\response.py", line 552, in __init__
-    'In order to allow non-dict objects to be serialized set the '
-TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
-DEBUG:root:index***********************************************************************
+  File "C:\Users\Playdata\Desktop\port\SA\portfolio\onePage\views.py", line 79, in selectCalendar
+    cnt = bemodel.dateCount - 1
+AttributeError: 'QuerySet' object has no attribute 'dateCount'
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (130)>]>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (100)>]>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (132)>]>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (133)>]>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (134)>]>
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (135)>]>
+WARNING:django.request:Not Found: /onePage/fixcal/
 WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
 WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
 WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
-WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
-WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
 WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
 WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
 WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
 WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
-WARNING:django.request:Not Found: /lib/classie/classie.js
 WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (102)>]>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (103)>]>
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
 WARNING:django.request:Not Found: /lib/chart/chart.js
 WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
 WARNING:django.request:Not Found: /js/main.js
@@ -371,30 +258,1226 @@ WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
 WARNING:django.request:Not Found: /img/avatar.jpg
 WARNING:django.request:Not Found: /js/main.js
 WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
-DEBUG:root:getMemebID***********************************************************************
-DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'asdvasdvasdvasdvas', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'czxcz', 'selectDate': '18/10/09', 'dateCount': 1, 'confirmIndicator': 0}]
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'czxcz', 'selectDate': '18/10/09', 'dateCount': 1, 'confirmIndicator': 0}]
-DEBUG:root:18/10/15
-DEBUG:root:xxx
-DEBUG:root:getMemebID***********************************************************************
-DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'asdvasdvasdvasdvas', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'czxcz', 'selectDate': '18/10/09', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'xxx', 'selectDate': '18/10/15', 'dateCount': 1, 'confirmIndicator': 0}]
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'czxcz', 'selectDate': '18/10/09', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'xxx', 'selectDate': '18/10/15', 'dateCount': 1, 'confirmIndicator': 0}]
-DEBUG:root:index***********************************************************************
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
 WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
 WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
 WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (139)>]>
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
 WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
 WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
 WARNING:django.request:Not Found: /img/avatar.jpg
 WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (140)>]>
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
 WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
 WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (141)>]>
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/fixcal/
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (142)>]>
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /img/heart.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/heart.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /js/main.js
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (147)>]>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (153)>]>
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (150)>]>
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
 WARNING:django.request:Not Found: /lib/chart/chart.js
 WARNING:django.request:Not Found: /lib/classie/classie.js
 WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
 WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
 WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
 WARNING:django.request:Not Found: /js/main.js
 WARNING:django.request:Not Found: /lib/easing/easing.min.js
@@ -403,14 +1486,620 @@ WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
 WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
 WARNING:django.request:Not Found: /lib/classie/classie.js
 WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
 WARNING:django.request:Not Found: /js/main.js
-DEBUG:root:getMemebID***********************************************************************
-DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'asdvasdvasdvasdvas', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'czxcz', 'selectDate': '18/10/09', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'xxx', 'selectDate': '18/10/15', 'dateCount': 1, 'confirmIndicator': 0}]
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'czxcz', 'selectDate': '18/10/09', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'xxx', 'selectDate': '18/10/15', 'dateCount': 1, 'confirmIndicator': 0}]
-DEBUG:root:18/10/09
-DEBUG:root:xxx
-DEBUG:root:getMemebID***********************************************************************
-DEBUG:root:<WSGIRequest: POST '/onePage/getMemberId/'>
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'kk', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'aa', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': '32', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'asdvasdvasdvasdvas', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'czxcz', 'selectDate': '18/10/09', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'xxx', 'selectDate': '18/10/15', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'xxx', 'selectDate': '18/10/09', 'dateCount': 2, 'confirmIndicator': 0}]
-DEBUG:root:[{'userId': 'wookim', 'selectDate': '18/10/07', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/08', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'wookim', 'selectDate': '18/10/06', 'dateCount': 4, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/03', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/02', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'asdasd', 'selectDate': '18/10/01', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'czxcz', 'selectDate': '18/10/09', 'dateCount': 2, 'confirmIndicator': 0}, {'userId': 'xxx', 'selectDate': '18/10/15', 'dateCount': 1, 'confirmIndicator': 0}, {'userId': 'xxx', 'selectDate': '18/10/09', 'dateCount': 2, 'confirmIndicator': 0}]
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (170)>]>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (174)>]>
+DEBUG:root:<QuerySet []>
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/confirm.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/confirm.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/jquery/jquery.min.js
+WARNING:django.request:Not Found: /lib/bootstrap/js/bootstrap.min.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/validate.js
+WARNING:django.request:Not Found: /lib/easing/easing.min.js
+WARNING:django.request:Not Found: /lib/chart/chart.js
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /lib/classie/classie.js
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/gnmenu/gnmenu.js
+WARNING:django.request:Not Found: /img/avatar.jpg
+WARNING:django.request:Not Found: /js/main.js
+WARNING:django.request:Not Found: /img/confirm.jpg

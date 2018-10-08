@@ -11,7 +11,7 @@ if settings.DEBUG:
         path('onePage/getMemberId/', views.getMemberId),
         path('onePage/loadCalendar/', views.loadCalendar),
         path('onePage/selectCalendar/', views.selectCalendar),
-        path('oenPage/fixcal/', views.loadCalendar),
+        path('onePage/fixcal/', views.fixcal),
         # For django versions before 2.0:
         # url(r'^__debug__/', include(debug_toolbar.urls)),
     ] 

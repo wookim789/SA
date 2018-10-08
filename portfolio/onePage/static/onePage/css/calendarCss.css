@@ -1,15 +1,21 @@
 @charset "UTF-8";
 
-.id{
+.userId{
+	font-size: 20px;
 	height: 50px;
-    overflow-y:scroll;
+	overflow-y:scroll;
     background-color: white;
 } 
 .bindD{
  height: 160px;
+ margin : 1px 1px 1px 1px;
 }
 
-
+.heart{
+position: absolute; top:0; left: 0;
+width: 100%;
+height: 100%;
+}
 
 .date{ 
 	padding: 0px 0px 0px 0px;
@@ -62,9 +68,19 @@ table {
 	border-color: rgb(180, 204, 202);
 }
 .countDate{
-	font-size: 20px;
+	color: white;
+	font-size: 18px;
+	margin-left: 16px;
+	margin-top: 10px;
+	position: absolute;
 }
-
+.heart{
+	width: 55px;
+	height: 50px;
+	float: left;
+	position:relative;
+	background-image: url(../img/heart.jpg);                                                               
+}
 
 
 #cal thead tr th {

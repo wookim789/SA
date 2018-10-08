@@ -24,7 +24,7 @@ $(document).ready(function () {
 	clickBut();
 
 	$("#userIdSave").click(function () {
-		if ($("#userIdInput").val() != ""|| userId == '') {
+		if ($("#userIdInput").val() != "" || userId == '') {
 			userId = $("#userIdInput").val();
 		} else {
 			alert("아이디를 입력하세요!")
@@ -81,29 +81,31 @@ function idHover() {
 	$(".date").hover(
 		//마우스 들어올때
 		function () {
-			$(this).children(".viewSc").children(".bindD").children('.id').css('visibility', 'visible');
+			$(this).children(".viewSc").children(".bindD").children('.userId').css('visibility', 'visible');
 		},
 		//마우스 나갈 때
 		function () {
-			$(this).children(".viewSc").children(".bindD").children(".id").css('visibility', 'hidden');
+			$(this).children(".viewSc").children(".bindD").children(".userId").css('visibility', 'hidden');
 		})
 }
 //좋아요 누른 회원 아이디 감추기
 function idHide() {
-	$(".id").css('visibility', 'hidden');
+	$(".userId").css('visibility', 'hidden');
 }
 
 
 //좋아요 누른 수 보여주는 메소드 + 누른 아이디 보여주는 메소드
 function printSelectDateAjax(year, month) {
 	//html 초기화
-	$(".countDate").html("");
-	$(".id").html("");
+	$(".countDate").detach("");
+	//$(".bindD").html("");
+	$(".userId").html("");
+	$(".heart").html("");
 	//div 추가
-	var output = "<div class = 'id'>";
+
 	//배열 추가
 	var dayList = new Array();
-
+	var day = 0;
 	//ajax 컨트롤러에서 데이터 받아와 아이디 뿌려주기
 	$.ajax({
 		url: '/onePage/getMemberId/',
@@ -115,44 +117,27 @@ function printSelectDateAjax(year, month) {
 				//디비에 저장된 selectDate 년도, 월 추출
 				var yearSub = Number(item.selectDate.substring(0, 2));
 				var monthSub = Number(item.selectDate.substring(3, 5));
-				//화면에 선택된 년, 월  == 디비 selectDate 일치 할 때만 실
+
 				if (yearSub == year && monthSub == Number(month)) {
-					//selectDate 날짜 추출
 					day = Number(item.selectDate.substring(6, 8));
-					//처음 실행 될 때
-					if (dayList.length == 0) {
-						//배열에 날짜 삽입
-						dayList.push(day);
-						//태그에 id 삽입
-						output += String(item.userId);
-						output += "<br/>"
-						//처음 실행이 아니고, 배열에 넣은 날짜와 지금 읽은 day값 비교하여 같을 때 (같은 날을 추가 한 유저가 아직 있을 때)
-					} else if (day == dayList[dayList.length - 1]) {
-						dayList.push(day);
-						output += String(item.userId);
-						output += "<br/>"
-						//처음 실행이 아니고,배열에 넣은 날짜와 지금 읽은 day값 비교하여 다를 때(같은 날을 추가한 유저가 없을 때)
-					} else if (day != dayList[dayList.length - 1]) {
-						//td 태그에 아이디들 html 삽입하기
-						output += "</div>"
-						$("#bind" + dayList[dayList.length - 1]).append(output);
-						dayList.push(day);
-						output = "<div class = 'id'>"
-						output += String(item.userId);
-						output += "<br/>"
+					if ($('#userId' + day).length == 0) {
+						var output = '<div class ="userId" id = "userId' + day + '">';
+						output += String(item.userId) + "<br/>" + "</div>";
+						$("#bind" + day).append(output);
+					} else if ($('#userId' + day).length != 0) {
+						var output = String(item.userId) + '<br/>';
+						$('#userId' + day).append(output);
 					}
 				}
 			})
-			//마지막에 추가된 아이디 추가 해주기
-			output += "</div>"
-			$("#bind" + dayList[dayList.length - 1]).append(output);
 			//아이디 숨기기
-			$(".id").css('visibility', 'hidden');
-		},
-		error: function () {
+			$(".userId").css('visibility', 'hidden');
+
+		}, erorr: function () {
 			alert("통신실패");
 		}
 	})
+
 	//디비에 저장된 좋아요 수 읽어와 태그에 +n 추가하기
 	$.ajax({
 		url: '/onePage/loadCalendar/',
@@ -168,14 +153,14 @@ function printSelectDateAjax(year, month) {
 
 				if (yearSub == year && monthSub == Number(month)) {
 					day = Number(item.selectDate.substring(6, 8));
-					output += '<div class = "countDate">';
-					output += '+' + String(item.dateCount);
-					output += '</div>';
+					if ($('#countDate' + day).length == 0) {
+						output += '<div class ="heart" id = "heart'+day+'"><div class = "countDate" id = "countDate' + day + '">' + '+' + String(item.dateCount) + '</div></div>';
+					}
 					//해당 좋아요 수를 td태그에 삽입하기
 					$('#bind' + day).append(output);
 					//확정 일때 색 수정하기
 					if (item.confirmIndicator == 1) {
-						$("#bind" + day).css("background-color", "green");
+						$("#heart" + day).css({"background-image": 'url("/img/confirm.jpg")'});
 					}
 				}
 			});
@@ -206,6 +191,7 @@ function showBut(day) {
 // 좋아요 버튼 눌렀을 때 년도 저장 하기 이벤트
 function clickBut() {
 	$(".goodBut").on("click", function () {
+
 		var yearSelect = $("#listYear").val();
 		var monthSelect = $("#listMonth").val();
 		var daySelect = $(this).val();
@@ -236,8 +222,6 @@ function clickBut() {
 
 		//저장하기 버튼이 없거나, 저장하기 버튼이 있어도 눌르지 않았을 때
 		if ((!$("#save").length || $("#save").val() == "일정확정") && userId != "") {
-			//
-			console.log(userId);
 			var ID = userId;
 			$.ajax({
 				url: "/onePage/selectCalendar/",
@@ -250,7 +234,10 @@ function clickBut() {
 				},
 				success: function (map) {
 					//좋아요 누른 수 보여주는 메소드 + 누른 아이디 보여주는 메소드
+					$(".heart").remove();
+					$(".id").remove();
 					printSelectDateAjax(Number(year), Number(monthSelect));
+					console.log(map)
 				},
 				erorr: function () {
 					alert("출력실패");
@@ -261,9 +248,9 @@ function clickBut() {
 			//일정 확정하기 버튼을 눌렀을 때 해당 버튼의 번호 가져오기
 			var num = $(this).attr("value");
 			//만약 누른 버튼의 바탕 색이 초록색이 아니면 (일정확정 안한 날 -일정 저장)
-			if ($("#bind" + num).css("background-color") != "rgb(0, 128, 0)") {
+			if ($("#bind" + num).css("background-color") != "rgb(71, 178, 151)") {
 				//바탕색을 초록색으로 바꾸기
-				$("#bind" + num).css("background-color", "green");
+				$("#heart" + num).css({"background-image": 'url("/img/confirm.jpg")'});
 				//ajax로 선택한 날 서버로 전송하기
 				$.ajax({
 					url: "/onePage/fixcal/",
@@ -272,7 +259,7 @@ function clickBut() {
 					dataType: "json",
 					data: {
 						"selectDate": date,
-						"userId ": userId
+						"user_ID" : userId
 					},
 					success: function (map) {
 						// alert(map.res);
@@ -284,7 +271,7 @@ function clickBut() {
 				//만약 누른 버튼의 바탕 색이 초록색이면 (이미 확정난 날이면 - 저장 취소)
 			} else {
 				//배경색 흰색으로 
-				$("#bind" + num).css("background-color", "white");
+				$("#heart" + num).css({"background-image": 'url("/img/heart.jpg")'});
 				//ajax로 선택한 날 서버로 전송
 				$.ajax({
 					url: "/onePage/fixcal/",
