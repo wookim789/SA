@@ -64,7 +64,7 @@ table {
 	border: solid;
 	border-width: 0.5px;
 	border-spacing: 0px;
-	border-collapse: separate;
+	border-collapse: separa	te;
 	border-color: rgb(180, 204, 202);
 }
 .countDate{
@@ -75,8 +75,8 @@ table {
 	position: absolute;
 }
 .heart{
-	width: 55px;
-	height: 50px;
+	width: 50px;
+	height: 45px;
 	float: left;
 	position:relative;
 	background-image: url(../img/heart.jpg);                                                               

@@ -154,13 +154,13 @@ function printSelectDateAjax(year, month) {
 				if (yearSub == year && monthSub == Number(month)) {
 					day = Number(item.selectDate.substring(6, 8));
 					if ($('#countDate' + day).length == 0) {
-						output += '<div class ="heart" id = "heart'+day+'"><div class = "countDate" id = "countDate' + day + '">' + '+' + String(item.dateCount) + '</div></div>';
+						output += '<div class ="heart" id = "heart' + day + '"><div class = "countDate" id = "countDate' + day + '">' + '+' + String(item.dateCount) + '</div></div>';
 					}
 					//해당 좋아요 수를 td태그에 삽입하기
 					$('#bind' + day).append(output);
 					//확정 일때 색 수정하기
 					if (item.confirmIndicator == 1) {
-						$("#heart" + day).css({"background-image": 'url("/img/confirm.jpg")'});
+						$("#heart" + day).css({ "background": "url('/static/onePage/img/confirm.jpg')" });
 					}
 				}
 			});
@@ -250,7 +250,7 @@ function clickBut() {
 			//만약 누른 버튼의 바탕 색이 초록색이 아니면 (일정확정 안한 날 -일정 저장)
 			if ($("#bind" + num).css("background-color") != "rgb(71, 178, 151)") {
 				//바탕색을 초록색으로 바꾸기
-				$("#heart" + num).css({"background-image": 'url("/img/confirm.jpg")'});
+				$("#heart" + num).css({ "background-image": 'url("/img/confirm.jpg")' });
 				//ajax로 선택한 날 서버로 전송하기
 				$.ajax({
 					url: "/onePage/fixcal/",
@@ -259,10 +259,13 @@ function clickBut() {
 					dataType: "json",
 					data: {
 						"selectDate": date,
-						"user_ID" : userId
+						"user_ID": userId
 					},
 					success: function (map) {
 						// alert(map.res);
+						$(".heart").remove();
+						$(".id").remove();
+						printSelectDateAjax(Number(year), Number(monthSelect));
 					},
 					erorr: function () {
 						alert("일정 확정 실패");
@@ -271,7 +274,7 @@ function clickBut() {
 				//만약 누른 버튼의 바탕 색이 초록색이면 (이미 확정난 날이면 - 저장 취소)
 			} else {
 				//배경색 흰색으로 
-				$("#heart" + num).css({"background-image": 'url("/img/heart.jpg")'});
+				$("#heart" + num).css({ "background-image": 'url("/img/heart.jpg")' });
 				//ajax로 선택한 날 서버로 전송
 				$.ajax({
 					url: "/onePage/fixcal/",
@@ -284,6 +287,9 @@ function clickBut() {
 					},
 					success: function (map) {
 						// alert(map.res);
+						$(".heart").remove();
+						$(".id").remove();
+						printSelectDateAjax(Number(year), Number(monthSelect));
 					},
 					erorr: function () {
 						alert("일정 확정 실패");
