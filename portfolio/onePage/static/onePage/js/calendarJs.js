@@ -76,6 +76,7 @@ $(document).ready(function () {
 	 * 맴핑되는 메소드가 실행되고 해당 메소드는 db에 접속하여 해당 일정에 날짜를 선택한 데이터를 가져와서 뿌려준다.
 	 */
 });
+//수정부분1111111111111111111111111111111111111
 //좋아요 누른 회원 아이디 마우스 호버 이벤트
 function idHover() {
 	$(".date").hover(
@@ -88,12 +89,13 @@ function idHover() {
 			$(this).children(".viewSc").children(".bindD").children(".userId").css('visibility', 'hidden');
 		})
 }
+//수정부분222222222222222222222222
 //좋아요 누른 회원 아이디 감추기
 function idHide() {
 	$(".userId").css('visibility', 'hidden');
 }
 
-
+//수정부분333333333333333333333333333333
 //좋아요 누른 수 보여주는 메소드 + 누른 아이디 보여주는 메소드
 function printSelectDateAjax(year, month) {
 	//html 초기화
@@ -187,7 +189,7 @@ function hiddenAllBut() {
 function showBut(day) {
 	$("#dateButton" + day).css('visibility', 'visible');
 }
-
+//수정부분5
 // 좋아요 버튼 눌렀을 때 년도 저장 하기 이벤트
 function clickBut() {
 	$(".goodBut").on("click", function () {
@@ -233,6 +235,7 @@ function clickBut() {
 					"user_ID": ID
 				},
 				success: function (map) {
+					//수정부분44444444444
 					//좋아요 누른 수 보여주는 메소드 + 누른 아이디 보여주는 메소드
 					$(".heart").remove();
 					$(".id").remove();
@@ -248,6 +251,8 @@ function clickBut() {
 			//일정 확정하기 버튼을 눌렀을 때 해당 버튼의 번호 가져오기
 			var num = $(this).attr("value");
 			//만약 누른 버튼의 바탕 색이 초록색이 아니면 (일정확정 안한 날 -일정 저장)
+			
+			//수정부분5555555555555555555555555555555555555555555555
 			if ($("#bind" + num).css("background-color") != "rgb(71, 178, 151)") {
 				//바탕색을 초록색으로 바꾸기
 				$("#heart" + num).css({ "background-image": 'url("/img/confirm.jpg")' });
@@ -341,7 +346,7 @@ function Calendar() {
 		return days;
 	}
 }
-
+//수정부분66666666666666
 // 달력생성 및 비어있는 칸 생성
 function calcCalendar(year, month) {
 	var calendar = new Calendar();
