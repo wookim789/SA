@@ -4,6 +4,46 @@
 * Author: TemplateMag.com
 * License: https://templatemag.com/license/
 */
+#portfolio1{
+  background-color: #bebdbd;
+}
+.jamExplainOL{
+  margin-left: 20%; 
+}
+.jamExplain{
+  padding-bottom: 2%;
+  color: #333;
+  text-align: left;
+  font-size: 20px;
+}
+.aboutH6{
+  margin-bottom: 25px;
+  text-align: left;
+  font-size: 15px;
+}
+.introOL{
+  padding: 0 0 0 2.5%;
+  margin:  0 0 0 0;
+}
+.introTd{
+  padding-bottom: 4%; 
+  padding-left: 2%;
+}
+.introTHead{
+  padding-bottom: 4%;
+}
+.introTRow{
+  margin-bottom: 15px;
+}
+.contentLink{
+  margin-right: 8%;
+}
+td{
+  text-align: left;
+}
+#contentLinkDiv{
+  margin: 30% 0 0 4%;
+}
 
 body {
   padding-top: 50px;

@@ -4,15 +4,18 @@
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
-
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("./mnist/data/", one_hot=True)
+
+
+#3번쨰 데이터 - > leaky relru 사용하기
+#4반째 데이터 -> g, d 레이러 늘리기 + 에포치 100, 배치 60
 
 #########
 # 옵션 설정
 ######
-total_epoch = 300
-batch_size = 100
+total_epoch = 150
+batch_size = 60
 learning_rate = 0.0002
 # 신경망 레이어 구성 옵션
 n_hidden = 256
@@ -30,33 +33,49 @@ Z = tf.placeholder(tf.float32, [None, n_noise])
 # 생성기 신경망에 사용하는 변수들입니다.
 G_W1 = tf.Variable(tf.random_normal([n_noise, n_hidden], stddev=0.01))
 G_b1 = tf.Variable(tf.zeros([n_hidden]))
-G_W2 = tf.Variable(tf.random_normal([n_hidden, n_input], stddev=0.01))
-G_b2 = tf.Variable(tf.zeros([n_input]))
+
+# G_W2 = tf.Variable(tf.random_normal([n_hidden, 5], stddev=0.01))
+# G_b2 = tf.Variable(tf.zeros([5]))
+
+# G_W3 = tf.Variable(tf.random_normal([5, n_input], stddev=0.01))
+# G_b3 = tf.Variable(tf.zeros([n_input]))
+
+G_W3 = tf.Variable(tf.random_normal([n_hidden, n_input], stddev=0.01))
+G_b3 = tf.Variable(tf.zeros([n_input]))
 
 # 판별기 신경망에 사용하는 변수들입니다.
 D_W1 = tf.Variable(tf.random_normal([n_input, n_hidden], stddev=0.01))
 D_b1 = tf.Variable(tf.zeros([n_hidden]))
 # 판별기의 최종 결과값은 얼마나 진짜와 가깝냐를 판단하는 한 개의 스칼라값입니다.
-D_W2 = tf.Variable(tf.random_normal([n_hidden, 1], stddev=0.01))
-D_b2 = tf.Variable(tf.zeros([1]))
+D_W2 = tf.Variable(tf.random_normal([n_hidden, 50], stddev=0.01))
+D_b2 = tf.Variable(tf.zeros([50]))
 
+D_W3 = tf.Variable(tf.random_normal([50, 1], stddev=0.01))
+D_b3 = tf.Variable(tf.zeros([1]))
 
 # 생성기(G) 신경망을 구성합니다.
-def generator(noise_z):
-    hidden = tf.nn.relu(
-                    tf.matmul(noise_z, G_W1) + G_b1)
-    output = tf.nn.sigmoid(
-                    tf.matmul(hidden, G_W2) + G_b2)
 
+
+def generator(noise_z):
+    hidden = tf.nn.leaky_relu(
+        tf.matmul(noise_z, G_W1) + G_b1)
+    # hidden2 = tf.nn.leaky_relu(
+    #     tf.matmul(hidden, G_W2) + G_b2)
+    # output = tf.nn.sigmoid(
+    #     tf.matmul(hidden2, G_W3) + G_b3)
+    output = tf.nn.sigmoid(
+        tf.matmul(hidden, G_W3) + G_b3)
     return output
 
 
 # 판별기(D) 신경망을 구성합니다.
 def discriminator(inputs):
-    hidden = tf.nn.relu(
-                    tf.matmul(inputs, D_W1) + D_b1)
+    hidden = tf.nn.leaky_relu(
+        tf.matmul(inputs, D_W1) + D_b1)
+    hidden2 = tf.nn.leaky_relu(
+        tf.matmul(hidden, D_W2) + D_b2)
     output = tf.nn.sigmoid(
-                    tf.matmul(hidden, D_W2) + D_b2)
+        tf.matmul(hidden2, D_W3) + D_b3)
 
     return output
 
@@ -90,8 +109,9 @@ loss_G = tf.reduce_mean(tf.log(D_gene))
 
 # loss_D 를 구할 때는 판별기 신경망에 사용되는 변수만 사용하고,
 # loss_G 를 구할 때는 생성기 신경망에 사용되는 변수만 사용하여 최적화를 합니다.
-D_var_list = [D_W1, D_b1, D_W2, D_b2]
-G_var_list = [G_W1, G_b1, G_W2, G_b2]
+D_var_list = [D_W1, D_b1, D_W2, D_b2, D_W3, D_b3]
+# G_var_list = [G_W1, G_b1, G_W2, G_b2, G_W3, G_b3]
+G_var_list = [G_W1, G_b1,  G_W3, G_b3]
 
 # GAN 논문의 수식에 따르면 loss 를 극대화 해야하지만, minimize 하는 최적화 함수를 사용하기 때문에
 # 최적화 하려는 loss_D 와 loss_G 에 음수 부호를 붙여줍니다.
@@ -138,7 +158,8 @@ for epoch in range(total_epoch):
             ax[i].set_axis_off()
             ax[i].imshow(np.reshape(samples[i], (28, 28)))
 
-        plt.savefig('samples/{}.png'.format(str(epoch).zfill(3)), bbox_inches='tight')
+        plt.savefig('samples/{}.png'.format(str(epoch).zfill(3)),
+                    bbox_inches='tight')
         plt.close(fig)
 
 print('최적화 완료!')

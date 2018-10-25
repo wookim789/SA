@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Freelance - Bootstrap Template</title>
+  <title>Wookim's Portfolio</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -47,15 +47,8 @@
         <nav class="gn-menu-wrapper">
           <div class="gn-scroller">
             <ul class="gn-menu">
-              <li class="gn-search-item">
-                <input placeholder="Search" type="search" class="gn-search">
-                <a class="gn-icon gn-icon-search"><span>Search</span></a>
-              </li>
-              <li><a href="#home" class="gn-icon gn-icon-home smoothscroll">Home</a></li>
-              <li><a href="#about" class="gn-icon gn-icon-archive smoothscroll">About</a></li>
-              <li><a href="#portfolio" class="gn-icon gn-icon-pictures smoothscroll">Portfolio</a></li>
-              <li><a href="#blog" class="gn-icon gn-icon-article smoothscroll">Blog</a></li>
-              <li><a href="#contact" class="gn-icon gn-icon-envelop smoothscroll">Contact</a></li>
+
+
             </ul>
           </div>
           <!-- /gn-scroller -->
@@ -72,8 +65,12 @@
   <div id="headerwrap">
     <div class="container">
       <div>
-        <h1>Hello. I'm wooKim.</h1>
-        <h1>Thank you for your visit.</h1>
+        <h1>Wookim's Portfolio</h1>
+      </div>
+      <div id=contentLinkDiv>
+        <a class="contentLink" href="#foliowrap">Javascript</a>
+        <a class="contentLink" href="">Deep Learning</a>
+        <a class="contentLink" href="">Stock Project</a>
       </div>
     </div>
     <!-- /container -->
@@ -88,14 +85,51 @@
       <h5>Machine Learning DEVELOPER</h5>
       <hr>
       <br>
-      <h4>
-        안녕하세요. 머신러닝 엔지니어를 꿈꾸는 김경우 입니다.<br />-
-      </h4>
-      <p>
-        저는 현재 JavaScript, python, django, tensorflow, keras를 공부하고 있습니다.
-        머신러닝엔지니어가 되고싶습니다.
-        <br />
-      </p>
+      <h4></h4>
+      <table class="intro">
+        <tr>
+          <th class="introTHead">Summary</th>
+          <td class="introTd">
+            Trying to solve various problems by using machine learning / deep
+            learning such as stock price forecasting, MNIST data generation using
+            GAN, Titanic survivor prediction, and so on. </td>
+        </tr>
+        <tr class="introTRow">
+          <th class="introTHead">Skills</th>
+          <td class="introTd">
+            <ol class="introOL">
+              <li>Using django, Build web page</li>
+              <li>Using Python to process and analyze data to classify, predict, and generate new data. </li>
+              <li>Using github to manage program's version </li>
+            </ol>
+          </td>
+        </tr>
+        <tr class="introTRow">
+          <th class="introTHead">Education</th>
+          <td class="introTd"> Physics Incheon University of Incheon</td>
+        </tr>
+
+
+
+      </table>
+    </div>
+    <!-- /col-lg-6 -->
+  </div>
+  <!-- /container -->
+
+  <!-- ABOUT SECTION -->
+  <section id="about" name="about"></section>
+  <div class="container about">
+    <div class="col-lg-6 col-lg-offset-3">
+      <h3>About Page</h3>
+      <hr>
+      <br>
+      <h4>1.<a href=""> Javascript</a> - Jam Calendar<br /></h4>
+      <h6 class="aboutH6">&nbsp &nbsp &nbsp -Using JavaScript, Make A calendar sharing your schedule with your friends</h6>
+      <h4>2.<a href=""> Deep Learning</a> - Using GAN, Generate Image<br /></h4>
+      <h6 class="aboutH6">&nbsp &nbsp &nbsp -Using Deep Learning, Make A image MNIST number image data by GAN</h6>
+      <h4>3.<a href=""> Stock Project</a> - Using ML, Predict Stock Price<br /></h4>
+      <h6 class="aboutH6">&nbsp &nbsp &nbsp -Using Machine learning, predict stock price by random forest</h6>
     </div>
     <!-- /col-lg-6 -->
   </div>
@@ -113,6 +147,7 @@
       <div class="col-lg-2">
         <canvas id="canvas" height="130" width="130"></canvas>
         <label><a href="#">JavaScript</a></label>
+
         <br>
         <br>
         <br>
@@ -123,7 +158,7 @@
       <!-- SECOND CHART -->
       <div class="col-lg-2">
         <canvas id="canvas1" height="130" width="130"></canvas>
-        <label><a href="#">python</a></label>
+        <label><a href="#">Deep Learning</a></label>
         <br>
         <br>
         <br>
@@ -134,7 +169,7 @@
       <!-- THIRD CHART -->
       <div class="col-lg-2">
         <canvas id="canvas2" height="130" width="130"></canvas>
-        <label><a href="#">Machine Learning</a></label>
+        <label><a href="#">Strock Project</a></label>
         <br>
         <br>
       </div>
@@ -146,11 +181,12 @@
   </div>
   <!-- chartwrap -->
 
-  <section id="portfolio" name="portfolio"></section>
+  <section id="portfolio1" name="portfolio"></section>
+
   <div id="foliowrap">
     <div class="container">
       <div id="divBox">
-        <h3 id="calendarHead1">Calendar</h3>
+        <h3 id="calendarHead1">Jam Calendar</h3>
         <h4 id="calendarHead2">Share schedule with your friends!</h4>
 
         <div id="selectTableDiv">
@@ -176,9 +212,36 @@
                   <input type="button" class="btn btn-primary" id="save" value="일정확정" />
                 </form>
               </td>
+              <td>
+                <button class="btn btn-default" id = "popbutton" >설명</button>
+                <div class="modal fade" id="layerpop">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <!-- header -->
+                        <div class="modal-header">
+                          <!-- 닫기(x) 버튼 -->
+                          <button type="button" class="close" data-dismiss="modal">×</button>
+                          <!-- header title -->
+                          <h4 class="modal-title">Header</h4>
+                        </div>
+                        <!-- body -->
+                        <div class="modal-body">
+                          Body
+                        </div>
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                          Footer
+                          <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </td>
             </tr>
           </table>
         </div>
+       
+        
 
         <!-- <div id="calendarDiv"></div> -->
         <div id="calendar"></div>
@@ -348,20 +411,13 @@
         <div class="accordion" id="accordion2">
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                <date>Sep 15, 2018</date>
-                <plus> + </plus>
-              </a>
+
             </div>
             <!-- /accordion-heading -->
             <div id="collapseOne" class="accordion-body collapse in">
               <br>
               <div class="accordion-inner">
-                <h4></h4>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p><img class="img-circle" src="img/avatar.jpg" height="50px" width="50px"> - <i>Wookim</i></p>
+
               </div>
               <!-- /accordion-inner -->
             </div>
@@ -370,57 +426,15 @@
           <!-- /accordion-group -->
           <br>
 
-          <div class="accordion-group">
-            <div class="accordion-heading">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                <date>Sep 10, 2018</date>
-                <plus> + </plus> Retina Ready Theme
-              </a>
-            </div>
-            <div id="collapseTwo" class="accordion-body collapse">
-              <div class="accordion-inner">
-                <p>머신러닝 엔지니어</p>
-              </div>
-              <!-- /accordion-inner -->
-            </div>
-            <!-- /collapse -->
-          </div>
+
           <!-- /accordion-group -->
           <br>
 
-          <div class="accordion-group">
-            <div class="accordion-heading">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                <date>Aug 22, 2018</date>
-                <plus> + </plus> Awesome Support
-              </a>
-            </div>
-            <div id="collapseThree" class="accordion-body collapse">
-              <div class="accordion-inner">
-                <p></p>
-              </div>
-              <!-- /accordion-inner -->
-            </div>
-            <!-- /collapse -->
-          </div>
+
           <!-- /accordion-group -->
           <br>
 
-          <div class="accordion-group">
-            <div class="accordion-heading">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                <date>Aug 13, 2018</date>
-                <plus> + </plus> Responsive Design
-              </a>
-            </div>
-            <div id="collapseFour" class="accordion-body collapse">
-              <div class="accordion-inner">
-                <p></p>
-              </div>
-              <!-- /accordion-inner -->
-            </div>
-            <!-- /collapse -->
-          </div>
+
           <!-- /accordion-group -->
           <br>
         </div>
@@ -438,31 +452,8 @@
     <div class="container">
       <div class="bs-example">
         <div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="item active">
-              <h1>Work with Alex was a pleasure. He understood exactly what I wanted and created an awesome site for my
-                company.</h1>
-              <br>
-              <h2>Brad Cooper</h2>
-            </div>
-            <div class="item">
-              <h1>I'm really happy with the results. Get 100% satisfaction is difficult but Alex got it without
-                problems.</h1>
-              <br>
-              <h2>Joan Mathews</h2>
-            </div>
-            <div class="item">
-              <h1>Search no more. Alex is the guy that you need for your next project. Don't waste your time. He's the
-                chosen one.</h1>
-              <br>
-              <h2>Trevor Bishop</h2>
-            </div>
-          </div>
+
+
           <br>
           <br>
           <br>
