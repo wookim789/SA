@@ -8,11 +8,6 @@ jQuery(document).ready(function( $ ) {
     interval: 5500
   })
 
-  $("#popbutton").click(function(){
-    alert("a");
-    $('div.modal').modal();
-  })  
-
 	// Smooth scroll for the menu and links with .scrollto classes
   $('.smoothscroll').on('click', function(e) {
     e.preventDefault();

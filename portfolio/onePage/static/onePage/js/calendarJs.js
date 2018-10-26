@@ -10,6 +10,7 @@ nowDay = dt.getDate();
 nowYear = dt.getFullYear();
 var userId = ""
 $(document).ready(function () {
+
 	//달력 계산
 	calcCalendar(nowYear, nowMonth);
 	//년도 올해로 설정
@@ -30,7 +31,10 @@ $(document).ready(function () {
 			alert("아이디를 입력하세요!")
 		}
 	})
-
+	// $("#exBut").click(function(){
+	// 	alert('ㅅㅅ');
+	// 	$('#layerpop').modal('toggle');
+	//   })
 	var year = String(nowYear).substring(2, 4);
 	//좋아요 및 좋아요 누른 회원 아이디 출력 함수
 	printSelectDateAjax(Number(year), nowMonth);
