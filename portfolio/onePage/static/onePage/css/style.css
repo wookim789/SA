@@ -119,7 +119,9 @@ hr {
 
 #headerwrap {
   /* background: url(../img/header-bg.jpg) no-repeat center top; */
-  background-color: rgb(106,202,177); /* no-repeat center top;*/
+  /* background-color: rgb(106,202,177); no-repeat center top; */
+  background-image: url("../img/back.jpg");
+  
   margin-top: -10px;
   padding-top: 120px;
   text-align: center;

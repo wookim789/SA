@@ -10,7 +10,7 @@ mnist = input_data.read_data_sets("./mnist/data/", one_hot=True)
 
 #3번쨰 데이터 - > leaky relru 사용하기
 #4반째 데이터 -> g, d 레이러 늘리기 + 에포치 100, 배치 60
-
+plt.imshow(mnist.test.images[r:r + 1].reshape(28, 28), cmap='Greys', interpolation='nearest')
 #########
 # 옵션 설정
 ######
@@ -80,7 +80,7 @@ def discriminator(inputs):
     return output
 
 
-# 랜덤한 노이즈(Z)를 만듭니다.
+# 랜덤한 노이즈(Z)를 만듭니다. 60 x 128
 def get_noise(batch_size, n_noise):
     return np.random.normal(size=(batch_size, n_noise))
 
