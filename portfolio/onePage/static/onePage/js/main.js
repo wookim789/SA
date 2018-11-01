@@ -1,13 +1,16 @@
 jQuery(document).ready(function( $ ) {
 
 	// Menu settings
-  var initgnMenu = new gnMenu(document.getElementById('gn-menu'));
+  //var initgnMenu = new gnMenu(document.getElementById('gn-menu'));
 
   // Carousel
   $('.carousel').carousel({
     interval: 5500
   })
 
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  
 	// Smooth scroll for the menu and links with .scrollto classes
   $('.smoothscroll').on('click', function(e) {
     e.preventDefault();
@@ -35,7 +38,7 @@ jQuery(document).ready(function( $ ) {
         color: "#ecf0f1"
       }
     ];
-    var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+    //var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
 	};
 
 	if($('#canvas1').length) {
@@ -48,7 +51,7 @@ jQuery(document).ready(function( $ ) {
 				color: "#ecf0f1"
 			}
 		];
-		var myDoughnut = new Chart(document.getElementById("canvas1").getContext("2d")).Doughnut(doughnutData);
+		//var myDoughnut = new Chart(document.getElementById("canvas1").getContext("2d")).Doughnut(doughnutData);
 	}
 
 	if($('#canvas2').length) {
@@ -61,7 +64,23 @@ jQuery(document).ready(function( $ ) {
 				color: "#ecf0f1"
 			}
 		];
-		var myDoughnut = new Chart(document.getElementById("canvas2").getContext("2d")).Doughnut(doughnutData);
+		//var myDoughnut = new Chart(document.getElementById("canvas2").getContext("2d")).Doughnut(doughnutData);
 	}
 
 });
+
+var slideIndex = 1;
+function showDivs(n) {
+  
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}

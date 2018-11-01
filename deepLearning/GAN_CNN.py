@@ -4,18 +4,20 @@
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
+from CNNclass import CNNfunction as cnn
 from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets("./mnist/data/", one_hot=True)
 
+mnist = input_data.read_data_sets("./mnist/data/", one_hot=True)
 
 #3번쨰 데이터 - > leaky relru 사용하기
 #4반째 데이터 -> g, d 레이러 늘리기 + 에포치 100, 배치 60
-plt.imshow(mnist.test.images[r:r + 1].reshape(28, 28), cmap='Greys', interpolation='nearest')
+plt.imshow(mnist.test.images[: + 1].reshape(28, 28),
+           cmap='Greys', interpolation='nearest')
 #########
 # 옵션 설정
 ######
-total_epoch = 150
-batch_size = 60
+total_epoch = 15
+batch_size = 100
 learning_rate = 0.0002
 # 신경망 레이어 구성 옵션
 n_hidden = 256
@@ -26,7 +28,15 @@ n_noise = 128  # 생성기의 입력값으로 사용할 노이즈의 크기
 # 신경망 모델 구성
 ######
 # GAN 도 Unsupervised 학습이므로 Autoencoder 처럼 Y 를 사용하지 않습니다.
+
+# input place holders
 X = tf.placeholder(tf.float32, [None, n_input])
+
+# img 28x28x1 (black/white)
+X_img = tf.reshape(X, [-1, 28, 28, 1])
+
+keep_prob = tf.placeholder(tf.float32)
+
 # 노이즈 Z를 입력값으로 사용합니다.
 Z = tf.placeholder(tf.float32, [None, n_noise])
 
@@ -49,9 +59,43 @@ D_b1 = tf.Variable(tf.zeros([n_hidden]))
 # 판별기의 최종 결과값은 얼마나 진짜와 가깝냐를 판단하는 한 개의 스칼라값입니다.
 D_W2 = tf.Variable(tf.random_normal([n_hidden, 50], stddev=0.01))
 D_b2 = tf.Variable(tf.zeros([50]))
-
-D_W3 = tf.Variable(tf.random_normal([50, 1], stddev=0.01))
+# D_W3 = tf.Variable(tf.random_normal([50, 1], stddev=0.01))
+D_W3 = tf.Variable(tf.random_normal([784, 1], stddev=0.01))
 D_b3 = tf.Variable(tf.zeros([1]))
+
+X_img = tf.reshape(X, [-1, 28, 28, 1])   # img 28x28x1 (black/white)
+W1 = tf.Variable(tf.random_normal([3, 3, 1, 32], stddev=0.01))
+L1 = tf.nn.conv2d(X_img, W1, strides=[1, 1, 1, 1], padding='SAME')
+L1 = tf.nn.relu(L1)
+L1 = tf.nn.max_pool(L1, ksize=[1, 2, 2, 1], strides=[
+                    1, 2, 2, 1], padding='SAME')
+L1 = tf.nn.dropout(L1, keep_prob=keep_prob)
+
+W2 = tf.Variable(tf.random_normal([3, 3, 32, 64], stddev=0.01))
+L2 = tf.nn.conv2d(L1, W2, strides=[1, 1, 1, 1], padding='SAME')
+L2 = tf.nn.relu(L2)
+L2 = tf.nn.max_pool(L2, ksize=[1, 2, 2, 1], strides=[
+                    1, 2, 2, 1], padding='SAME')
+L2 = tf.nn.dropout(L2, keep_prob=keep_prob)
+
+W3 = tf.Variable(tf.random_normal([3, 3, 64, 128], stddev=0.01))
+L3 = tf.nn.conv2d(L2, W3, strides=[1, 1, 1, 1], padding='SAME')
+L3 = tf.nn.relu(L3)
+L3 = tf.nn.max_pool(L3, ksize=[1, 2, 2, 1], strides=[
+                    1, 2, 2, 1], padding='SAME')
+L3 = tf.nn.dropout(L3, keep_prob=keep_prob)
+L3 = tf.reshape(L3, [-1, 128 * 4 * 4])
+
+W4 = tf.get_variable("W4", shape=[128 * 4 * 4, 784],
+                     initializer=tf.contrib.layers.xavier_initializer())
+b4 = tf.Variable(tf.random_normal([784]))
+L4 = tf.nn.relu(tf.matmul(L3, W4) + b4)
+L4 = tf.nn.dropout(L4, keep_prob=keep_prob)
+
+W5 = tf.get_variable(
+    "W5", shape=[784, 784], initializer=tf.contrib.layers.xavier_initializer())
+b5 = tf.Variable(tf.random_normal([784]))
+hypothesis = tf.matmul(L4, W5) + b5
 
 # 생성기(G) 신경망을 구성합니다.
 
@@ -69,28 +113,34 @@ def generator(noise_z):
 
 
 # 판별기(D) 신경망을 구성합니다.
-def discriminator(inputs):
-    hidden = tf.nn.leaky_relu(
-        tf.matmul(inputs, D_W1) + D_b1)
-    hidden2 = tf.nn.leaky_relu(
-        tf.matmul(hidden, D_W2) + D_b2)
+def discriminator():
+
+    # hidden = tf.nn.leaky_relu(
+    #     tf.matmul(h, D_W1) + D_b1)
+    # hidden2 = tf.nn.leaky_relu(
+    #     tf.matmul(hidden, D_W2) + D_b2)
+    # output = tf.nn.sigmoid(
+    #     tf.matmul(hidden2, D_W3) + D_b3)
     output = tf.nn.sigmoid(
-        tf.matmul(hidden2, D_W3) + D_b3)
+        tf.matmul(hypothesis, D_W3) + D_b3)
 
     return output
 
 
 # 랜덤한 노이즈(Z)를 만듭니다. 60 x 128
 def get_noise(batch_size, n_noise):
-    return np.random.normal(size=(batch_size, n_noise))
+    a = np.random.normal(size=(batch_size, n_noise))
+    print(a.shape)
+    return a
 
 
 # 노이즈를 이용해 랜덤한 이미지를 생성합니다.
 G = generator(Z)
+G_img = tf.reshape(X, [-1, 28, 28, 1])
 # 노이즈를 이용해 생성한 이미지가 진짜 이미지인지 판별한 값을 구합니다.
-D_gene = discriminator(G)
+D_gene = discriminator(G_img, keep_prob)
 # 진짜 이미지를 이용해 판별한 값을 구합니다.
-D_real = discriminator(X)
+D_real = discriminator(X_img, keep_prob)
 
 # 논문에 따르면, GAN 모델의 최적화는 loss_G 와 loss_D 를 최대화 하는 것 입니다.
 # 다만 loss_D와 loss_G는 서로 연관관계가 있기 때문에 두 개의 손실값이 항상 같이 증가하는 경향을 보이지는 않을 것 입니다.
@@ -109,8 +159,9 @@ loss_G = tf.reduce_mean(tf.log(D_gene))
 
 # loss_D 를 구할 때는 판별기 신경망에 사용되는 변수만 사용하고,
 # loss_G 를 구할 때는 생성기 신경망에 사용되는 변수만 사용하여 최적화를 합니다.
-D_var_list = [D_W1, D_b1, D_W2, D_b2, D_W3, D_b3]
-# G_var_list = [G_W1, G_b1, G_W2, G_b2, G_W3, G_b3]
+# D_var_list = [D_W1, D_b1, D_W2, D_b2, D_W3, D_b3]
+D_var_list = [W1, L1, W2, L2, W3, L3, W4, L4, W5, D_W3, D_b3]
+# G_var_list = [G_W1, G_b1, G_W2, G_b2, G_W3, G_b3]-*
 G_var_list = [G_W1, G_b1,  G_W3, G_b3]
 
 # GAN 논문의 수식에 따르면 loss 를 극대화 해야하지만, minimize 하는 최적화 함수를 사용하기 때문에

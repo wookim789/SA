@@ -865,6 +865,7 @@ input.gn-search:focus {
 
 /* Copyrights */
 
+}
 #copyrights {
   background: #222222;
   padding: 20px 0;
@@ -882,4 +883,17 @@ input.gn-search:focus {
 
 .credits {
   color: #999;
+}
+
+.mnistTable{
+  text-align: center;
+}
+.mnistBtn{
+  margin-left: 43%;
+}
+.mnistTableT{
+  width: 100%;
+}
+#divMnist{
+  width: 100%;
 }
