@@ -29,10 +29,8 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
-    <script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-	crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
   <script src='{%static "onePage/js/calendarJs.js"%}'></script>
   <!-- =======================================================
     Template Name: Freelance
@@ -186,70 +184,104 @@
   <!-- chartwrap -->
 
   <section id="portfolio1" name="portfolio"></section>
+  <!-- Tab links -->
 
   <div id="foliowrap">
-    <div class="container">
-      <div id="divBox">
-        <h3 id="calendarHead1">Jam Calendar</h3>
-        <h4 id="calendarHead2">Share schedule with your friends!</h4>
 
-        <div id="selectTableDiv">
-          <table id="selectTable">
-            <tr>
-              <td>
-                <div id="nowYear"></div>
-              </td>
-              <td>
-                <div id="nowMonth"></div>
-              </td>
-              <td>
-                <form>
-                  <input type="text" class="form-control" id="userIdInput" placeholder='아이디를 입력 하세요!'>
-                </form>
-              </td>
-              <td>
-                <form>
-                  <input type="button" class="btn btn-primary" id="userIdSave"" value=" 아이디선택" />
-                </form>
-              <td>
-                <form>
-                  <input type="button" class="btn btn-primary" id="save" value="일정확정" />
-                </form>
-              </td>
-              <td>
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#layerpop">설명</button>
-                <div class="modal" tabindex="-1" role="dialog" id = "layerpop">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <p>Modal body text goes here.</p>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+    <div class="container">
+      <!-- Tab links -->
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">Make Team</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Jam Calendar</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Jam Map</button>
+      </div>
+
+      <!-- Tab content -->
+      <div id="makeTeamTab" class="tabcontent">
+        <h3>Make Team</h3>
+
+      </div>
+
+      <div id="jamCalendarTab" class="tabcontent">
+        <h3>Jam Calendar</h3>
+        <div id="divBox">
+            <h3 id="calendarHead1">Jam Calendar</h3>
+            <h4 id="calendarHead2">Share schedule with your friends!</h4>
+    
+            <div id="selectTableDiv">
+              <table id="selectTable">
+                <tr>
+                  <td>
+                    <div id="nowYear"></div>
+                  </td>
+                  <td>
+                    <div id="nowMonth"></div>
+                  </td>
+                  <td>
+                    <form>
+                      <input type="text" class="form-control" id="userIdInput" placeholder='아이디를 입력 하세요!'>
+                    </form>
+                  </td>
+                  <td>
+                    <form>
+                      <input type="button" class="btn btn-primary" id="userIdSave"" value=" 아이디선택" />
+                    </form>
+                  <td>
+                    <form>
+                      <input type="button" class="btn btn-primary" id="save" value="일정확정" />
+                    </form>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#layerpop">설명</button>
+                    <div class="modal" tabindex="-1" role="dialog" id="layerpop">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Jam Calendar 설명</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                              <h4>Jam Calendar</h4>
+                              Jam Calendar는 친구들 혹은 동료들과 일정을 정하고 싶을 때, 편의를 제공하는 달력입니다. <br>
+                              1. 아이디를 입력하세요.<br>
+                              2. 자신이 원하는 년도, 월을 고르세요.<br>
+                              3. 자신이 원하는 일에 마우스를 올려보세요.<br>
+                              4. 좋아요 버튼을 눌러보세요.<br>
+                              5. 이제 본인의 아이디와 좋아수가 출력됩니다.<br>
+                              6. 가장 많은 좋아요를 받은 일을 확정시켜보아요.<br>
+                              7. 일정 확정 버튼을 누르고 해당 일을 누르면 일정이 확정됩니다.
+                              <h4>이제 친구들과 일정을 쉽게 정해보세요!</h4>
+                            </p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-       
-        
-
-        <!-- <div id="calendarDiv"></div> -->
-        <div id="calendar"></div>
-        {%csrf_token%}
+                  </td>
+                </tr>
+              </table>
+            </div>
+    
+    
+    
+            <!-- <div id="calendarDiv"></div> -->
+            <div id="calendar"></div>
+            {%csrf_token%}
+          </div>
+          <br>
+          <br>
       </div>
-      <br>
-      <br>
+
+      <div id="jamMapTab" class="tabcontent">
+        <h3>Jam Map</h3>
+
+      </div>
+      
       <div class="row">
 
         <!-- PORTFOLIO IMAGE 1 -->
@@ -405,25 +437,25 @@
         <h3>Generate MNIST data by GAN Deep Learning</h3>
 
         <h5>
-          <div id = "divMnist">
-            <table class ="mnistTableT">
-              <th  class = mnistTable>MNIST Data</th>
-              <th  class = mnistTable>Generated Data By GAN</th>
+          <div id="divMnist">
+            <table class="mnistTableT">
+              <th class=mnistTable>MNIST Data</th>
+              <th class=mnistTable>Generated Data By GAN</th>
               <tr>
-                <td><img class="mnist" src="../../static/onePage/img/mnistR.png"  style=" width: 100%"></td>
+                <td><img class="mnist" src="../../static/onePage/img/mnistR.png" style=" width: 100%"></td>
                 <td>
-                    <img class="mySlides" src="../../static/onePage/img/kim1.png"style=" width: 100%">
-                    <img class="mySlides" src="../../static/onePage/img/kim2.png"style=" width: 100%">
-                    <img class="mySlides" src="../../static/onePage/img/kim3.png"style=" width: 100%">
+                  <img class="mySlides" src="../../static/onePage/img/kim1.png" style=" width: 100%">
+                  <img class="mySlides" src="../../static/onePage/img/kim2.png" style=" width: 100%">
+                  <img class="mySlides" src="../../static/onePage/img/kim3.png" style=" width: 100%">
 
-        
-                    <button class="w3-button w3-display-left mnistBtn" onclick="plusDivs(-1)">&#10094;</button>
-                    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button> 
+
+                  <button class="w3-button w3-display-left mnistBtn" onclick="plusDivs(-1)">&#10094;</button>
+                  <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
                 </td>
               </tr>
             </table>
-            
-            
+
+
           </div>
         </h5>
         <br>
