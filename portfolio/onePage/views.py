@@ -12,6 +12,7 @@ logging.basicConfig(filename='./test.log', level=logging.DEBUG)
 
 
 def index(request):
+    request.session['logInState'] = 'logOut'
     return render(request, 'onePage/index.html')
 
 
