@@ -1499,3 +1499,248 @@ Traceback (most recent call last):
     content_encoding = response.get('Content-Encoding', '')
 AttributeError: 'WSGIRequest' object has no attribute 'get'
 WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/login/lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+ERROR:django.request:Internal Server Error: /onePage/img/portfolio/folio06.jpg
+Traceback (most recent call last):
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Playdata\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) '__debug__/'>], [<URLPattern ''>], [<URLPattern 'onePage/getMemberId/'>], [<URLPattern 'onePage/loadCalendar/'>], [<URLPattern 'onePage/selectCalendar/'>], [<URLPattern 'onePage/fixcal/'>], [<URLPattern 'onePage/login/'>]], 'path': 'onePage/img/portfolio/folio06.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\deprecation.py", line 91, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 44, in response_for_exception
+    response = debug.technical_404_response(request, exc)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\debug.py", line 509, in technical_404_response
+    return HttpResponseNotFound(t.render(c), content_type='text/html')
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\test\utils.py", line 95, in instrumented_test_render
+    template_rendered.send(sender=self, template=self, context=context)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\dispatch\dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\dispatch\dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\debug_toolbar\panels\templates\panel.py", line 103, in _store_template_info
+    pformatted = self.pformat_layers[index]
+IndexError: list index out of range
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/login/lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/login/lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /onePage/login/
+Traceback (most recent call last):
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'uesrId'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Playdata\Desktop\secondProject\SA\portfolio\onePage\login.py", line 26, in login
+    print(request.POST['uesrId'])
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'uesrId'
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /onePage/login/
+Traceback (most recent call last):
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'uesrId'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Playdata\Desktop\secondProject\SA\portfolio\onePage\login.py", line 26, in login
+    print(request.POST['uesrId'])
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'uesrId'
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /onePage/login/
+Traceback (most recent call last):
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Playdata\Desktop\secondProject\SA\portfolio\onePage\login.py", line 24, in login
+    print("++++++++++++++++++++"+request.POST.get('userId')[0])
+IndexError: string index out of range
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /onePage/login/
+Traceback (most recent call last):
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Playdata\Desktop\secondProject\SA\portfolio\onePage\login.py", line 21, in login
+    print("-------------------"+request.POST.get('userPw')+"asb")
+TypeError: must be str, not NoneType
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /onePage/login/
+Traceback (most recent call last):
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Playdata\Desktop\secondProject\SA\portfolio\onePage\login.py", line 21, in login
+    print("-------------------"+request.POST.get('userPw')+"asb")
+TypeError: must be str, not NoneType
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /onePage/login/
+Traceback (most recent call last):
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Playdata\Desktop\secondProject\SA\portfolio\onePage\login.py", line 21, in login
+    print("-------------------"+request.POST.get('userPw',None)+"asb")
+TypeError: must be str, not NoneType
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /onePage/login/
+Traceback (most recent call last):
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Playdata\Desktop\secondProject\SA\portfolio\onePage\login.py", line 21, in login
+    print("-------------------"+request.POST.get('userPw', None))
+TypeError: must be str, not NoneType
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /onePage/login/
+Traceback (most recent call last):
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Playdata\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Playdata\Desktop\secondProject\SA\portfolio\onePage\login.py", line 21, in login
+    print("-------------------"+request.POST.get('userPw',None))
+TypeError: must be str, not NoneType
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico

@@ -4,34 +4,27 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Wookim's Portfolio</title>
+  <title>Jam Planer</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
-
-  <!-- Favicons -->
-  <link href='{% static "onePage/img/favicon.png"%}' rel="icon">
-  <link href='{% static "onePage/img/apple-touch-icon.png"%}' rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Raleway:400,300,700" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href='{% static "onePage/css/style.css"%}' rel="stylesheet">
-
-
-  <link href='{%static "onePage/css/calendarCss.css"%}' rel="stylesheet" />
-
-
+  
   <!-- Bootstrap CSS File -->
   <link href='{% static "onePage/lib/bootstrap/css/bootstrap.min.css"%}' rel="stylesheet">
 
-
+  <!--jquery-->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script src='{%static "onePage/js/calendarJs.js"%}'></script>
+  <script src='{%static "onePage/js/login.js"%}'></script>
+
   <!-- =======================================================
     Template Name: Freelance
     Template URL: https://templatemag.com/freelance-bootstrap-template/
@@ -40,633 +33,72 @@
   ======================================================= -->
 </head>
 
-<body data-spy="scroll" data-offset="0" data-target="#gn-menu">
-  <!-- ========== MAIN MENU ========== -->
-  <div class="container">
-    <ul id="gn-menu" class="gn-menu-main">
-      <li class="gn-trigger">
-        <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-        <nav class="gn-menu-wrapper">
-          <div class="gn-scroller">
-            <ul class="gn-menu">
 
-
-            </ul>
-          </div>
-          <!-- /gn-scroller -->
-        </nav>
-      </li>
-      <li><a href="#home" class="smoothscroll">Contact</a></li>
-    </ul>
-  </div>
-  <!-- /container -->
-
-
-  <!-- ========== HEADER SECTION ========== -->
-  <section id="home" name="home"></section>
-  <div id="headerwrap">
-    <div class="container">
-      <div>
-        <h1>Wookim's Project</h1>
-      </div>
-      <div id=contentLinkDiv>
-        <a class="contentLink" href="#foliowrap">Javascript</a>
-        <a class="contentLink" href="">Deep Learning</a>
-        <a class="contentLink" href="">Stock Project</a>
-      </div>
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /headerwrap -->
-
-  <!-- ABOUT SECTION -->
-  <section id="about" name="about"></section>
-  <div class="container about">
-    <div class="col-lg-6 col-lg-offset-3">
-      <h3>About WooKim</h3>
-      <h5>Machine Learning DEVELOPER</h5>
-      <hr>
-      <br>
-      <h4></h4>
-      <table class="intro">
+<div id = "loginDiv">
+            
+    <form id = "loginForm" action="/onePage/login/" method="POST">
+      {%csrf_token%}
+      <table>
+        <th>LogIn</th>
         <tr>
-          <th class="introTHead">Summary</th>
-          <td class="introTd">
-            Trying to solve various problems by using machine learning / deep
-            learning such as stock price forecasting, MNIST data generation using
-            GAN, Titanic survivor prediction, and so on. </td>
-        </tr>
-        <tr class="introTRow">
-          <th class="introTHead">Skills</th>
-          <td class="introTd">
-            <ol class="introOL">
-              <li>Using django, Build web page</li>
-              <li>Using Python to process and analyze data to classify, predict, and generate new data. </li>
-              <li>Using github to manage program's version </li>
-            </ol>
+          <td>   
+            <input id = "loginId" type="text" name="userId" placeholder="Id" />
           </td>
         </tr>
-        <tr class="introTRow">
-          <th class="introTHead">Education</th>
-          <td class="introTd"> Physics Incheon University of Incheon</td>
+        <tr>
+          <td>
+            <input id = "loginPw" type="password" name="userPw"  placeholder="Password" />
+          </td>
         </tr>
-
-
-
-      </table>
-    </div>
-    <!-- /col-lg-6 -->
-  </div>
-  <!-- /container -->
-
-  <!-- ABOUT SECTION -->
-  <section id="about" name="about"></section>
-  <div class="container about">
-    <div class="col-lg-6 col-lg-offset-3">
-      <h3>About Page</h3>
-      <hr>
-      <br>
-      <h4>1.<a href=""> Javascript</a> - Jam Calendar<br /></h4>
-      <h6 class="aboutH6">&nbsp &nbsp &nbsp -Using JavaScript, Make A calendar sharing your schedule with your friends</h6>
-      <h4>2.<a href=""> Deep Learning</a> - Using GAN, Generate Image<br /></h4>
-      <h6 class="aboutH6">&nbsp &nbsp &nbsp -Using Deep Learning, Make A image MNIST number image data by GAN</h6>
-      <h4>3.<a href=""> Stock Project</a> - Using ML, Predict Stock Price<br /></h4>
-      <h6 class="aboutH6">&nbsp &nbsp &nbsp -Using Machine learning, predict stock price by random forest</h6>
-    </div>
-    <!-- /col-lg-6 -->
-  </div>
-  <!-- /container -->
-
-
-  <!-- BEGIN CHART SECTION -->
-  <div id="chartwrap">
-    <br>
-    <br>
-    <div class="container centered">
-      <div class="col-lg-3"></div>
-
-      <!-- FIRST CHART -->
-      <div class="col-lg-2">
-        <canvas id="canvas" height="130" width="130"></canvas>
-        <label><a href="#">JavaScript</a></label>
-
-        <br>
-        <br>
-        <br>
-      </div>
-      <!-- col-lg-2 -->
-
-
-      <!-- SECOND CHART -->
-      <div class="col-lg-2">
-        <canvas id="canvas1" height="130" width="130"></canvas>
-        <label><a href="#">Deep Learning</a></label>
-        <br>
-        <br>
-        <br>
-      </div>
-      <!-- col-lg-2 -->
-
-
-      <!-- THIRD CHART -->
-      <div class="col-lg-2">
-        <canvas id="canvas2" height="130" width="130"></canvas>
-        <label><a href="#">Strock Project</a></label>
-        <br>
-        <br>
-      </div>
-      <!-- col-lg-2 -->
-
-      <div class="col-lg-3"></div>
-    </div>
-    <!-- container -->
-  </div>
-  <!-- chartwrap -->
-
-  <section id="portfolio1" name="portfolio"></section>
-  <!-- Tab links -->
-
-  <div id="foliowrap">
-
-    <div class="container">
-      <!-- Tab links -->
-      <div class="jamTab">
-        <!-- <button class="tablinks" onclick="openCity(event, 'London')">Make Team</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Jam Calendar</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Jam Map</button> -->
-        <button class="tablinks" id = "makeTeamTabBut" value = "makeTeamTabBut">Make Team</button>
-        <button class="tablinks" id = "calendarTabBut" value = "calendarTabBut">Jam Calendar</button>
-        <button class="tablinks" id = "mapTabBut" value = "mapTabBut">Jam Map</button>
-      </div>
-
-      <!-- Tab content -->
-      <div id="makeTeamTab" class="tabcontent" value = "makeTeamTabBut">
-        <h3>Make Team</h3>
-        <div id = "loginDiv">
+        <tr>
+          <td>
+            <button class ="btn btn-secondary loginBoxBut" id = "logInBtn" >LogIn</button>
+            <!-- <button class ="btn btn-secondary loginBoxBut" type = "submit" id = "logInBut" >LogIn</button> -->
+            <button type="button" class="btn btn-default signUp" data-toggle="modal" data-target="#layerpop">signUp</button>
             
-            <form action="/onePage/login/" method="POST">
-
-              <table>
-                <th>LogIn</th>
-                <tr>
-                  <td>   
-                    <input type="text" name="userName" placeholder="Id" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="password" name="userPw"  placeholder="Password" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class ="btn btn-secondary loginBoxBut" type = "submit" id = "logInBut" value="LogIn" >
-                    <button type="button" class="btn btn-default signUp" data-toggle="modal" data-target="#layerpop">signUp</button>
-                    
-                    <div class="modal" tabindex="-1" role="dialog" id="layerpop">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title">signUp</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <label>Please write your Id</label>
-                                <input type= "text" placeholder="Id">
-                                <label>Please write your Password</label>
-                                <input type= "password" placeholder="password">
-                                <label>Please write your Email</label>
-                                <input type= "text" placeholder="email">
-                                
-                              </form>
-                            </div>
-                            <div class="modal-footer">
-                              <table>
-                                <tr><button class = "btn btn-secondary signUpBtn" type="submit">signUp</button></tr>
-                                <tr><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></tr>
-                              </table>
-                          
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    
-                  </td>
-                </tr>
-              </table>
-              {%csrf_token%}
-          </form>              
-              
-        </div>
-      </div>
-
-      <div id="jamCalendarTab" class="tabcontent" value = "calendarTabBut">
-        <div id="divBox">
-            <h3 id="calendarHead1">Jam Calendar</h3>
-            <h4 id="calendarHead2">Share schedule with your friends!</h4>
-    
-            <div id="selectTableDiv">
-              <table id="selectTable">
-                <tr>
-                  <td>
-                    <div id="nowYear"></div>
-                  </td>
-                  <td>
-                    <div id="nowMonth"></div>
-                  </td>
-                  <td>
-                    <form>
-                      <input type="text" class="form-control" id="userIdInput" placeholder='아이디를 입력 하세요!'>
-                    </form>
-                  </td>
-                  <td>
-                    <form>
-                      <input type="button" class="btn btn-primary" id="userIdSave"" value=" 아이디선택" />
-                    </form>
-                  <td>
-                    <form>
-                      <input type="button" class="btn btn-primary" id="save" value="일정확정" />
-                    </form>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#layerpop">설명</button>
-                    <div class="modal" tabindex="-1" role="dialog" id="layerpop">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Jam Calendar 설명</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <p>
-                              <h4>Jam Calendar</h4>
-                              Jam Calendar는 친구들 혹은 동료들과 일정을 정하고 싶을 때, 편의를 제공하는 달력입니다. <br>
-                              1. 아이디를 입력하세요.<br>
-                              2. 자신이 원하는 년도, 월을 고르세요.<br>
-                              3. 자신이 원하는 일에 마우스를 올려보세요.<br>
-                              4. 좋아요 버튼을 눌러보세요.<br>
-                              5. 이제 본인의 아이디와 좋아수가 출력됩니다.<br>
-                              6. 가장 많은 좋아요를 받은 일을 확정시켜보아요.<br>
-                              7. 일정 확정 버튼을 누르고 해당 일을 누르면 일정이 확정됩니다.
-                              <h4>이제 친구들과 일정을 쉽게 정해보세요!</h4>
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
+            <div class="modal" tabindex="-1" role="dialog" id="layerpop">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">signUp</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
                     </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
+                    <div class="modal-body">
+                      <form>
+                        <label>Please write your Id</label>
+                        <input id = "userId" type= "text" name = "userID" placeholder="Id">
+                        <label>Please write your Password</label>
+                        <input id = "userPw" type= "password" name = "userPW" placeholder="password">
+                        <label>Please write your Email</label>
+                        <input id = "email" type= "text" name = "email" placeholder="email">
+                        
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <table>
+                        <tr><button class = "btn btn-secondary signUpBtn" type="submit">signUp</button></tr>
+                        <tr><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></tr>
+                      </table>
+                  
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            
+          </td>
+        </tr>
+      </table>
     
-    
-    
-            <!-- <div id="calendarDiv"></div> -->
-            <div id="calendar"></div>
-            {%csrf_token%}
-          </div>
-          <br>
-          <br>
-      </div>
-
-      <div id="jamMapTab" class="tabcontent" value = "mapTabBut">
-        <h3>Jam Map</h3>
-
-      </div>
+  </form>              
       
-      <div class="row">
+</div>
 
-        <!-- PORTFOLIO IMAGE 1 -->
-        <div class="col-md-4 ">
-          <div class="grid mask">
-            <figure>
-              <img class="img-responsive" src="img/portfolio/folio01.jpg" alt="">
-              <figcaption>
-                <h5>DASHBOARD</h5>
-                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-              </figcaption>
-              <!-- /figcaption -->
-            </figure>
-            <!-- /figure -->
-          </div>
-          <!-- /grid-mask -->
-          <br>
-        </div>
-        <!-- /col -->
-
-
-        <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
-						      a modal for each of your projects. -->
-
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Project Title</h4>
-              </div>
-              <div class="modal-body">
-                <p><img class="img-responsive" src="img/portfolio/folio01.jpg" alt=""></p>
-                <p>안녕안녕</p>
-                <p><b><a href="https://github.com/wookim789/SA.git">github site</a></b></p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-            <!-- /.modal-content -->
-          </div>
-          <!-- /.modal-dialog -->
-        </div>
-        <!-- /.modal -->
-
-
-        <!-- PORTFOLIO IMAGE 2 -->
-        <div class="col-md-4">
-          <div class="grid mask">
-            <figure>
-              <img class="img-responsive" src="../img/portfolio/folio02.jpg" alt="">
-              <figcaption>
-                <h5>UI DESIGN</h5>
-                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-              </figcaption>
-              <!-- /figcaption -->
-            </figure>
-            <!-- /figure -->
-          </div>
-          <!-- /grid-mask -->
-          <br>
-        </div>
-        <!-- /col -->
-
-        <!-- PORTFOLIO IMAGE 3 -->
-        <div class="col-md-4">
-          <div class="grid mask">
-            <figure>
-              <img class="img-responsive" src="../img/portfolio/folio03.jpg" alt="">
-              <figcaption>
-                <h5>ANDROID PAGE</h5>
-                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-              </figcaption>
-              <!-- /figcaption -->
-            </figure>
-            <!-- /figure -->
-          </div>
-          <!-- /grid-mask -->
-          <br>
-        </div>
-        <!-- /col -->
-      </div>
-      <!-- /row -->
-
-      <!-- PORTFOLIO IMAGE 4 -->
-      <div class="row">
-        <div class="col-md-4 ">
-          <div class="grid mask">
-            <figure>
-              <img class="img-responsive" src="../img/portfolio/folio04.jpg" alt="">
-              <figcaption>
-                <h5>PROFILE</h5>
-                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-              </figcaption>
-              <!-- /figcaption -->
-            </figure>
-            <!-- /figure -->
-          </div>
-          <!-- /grid-mask -->
-          <br>
-        </div>
-        <!-- /col -->
-
-        <!-- PORTFOLIO IMAGE 5 -->
-        <div class="col-md-4">
-          <div class="grid mask">
-            <figure>
-              <img class="img-responsive" src="../img/portfolio/folio05.jpg" alt="">
-              <figcaption>
-                <h5>TWITTER STATUS</h5>
-                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-              </figcaption>
-              <!-- /figcaption -->
-            </figure>
-            <!-- /figure -->
-          </div>
-          <!-- /grid-mask -->
-          <br>
-        </div>
-        <!-- /col -->
-
-        <!-- PORTFOLIO IMAGE 6 -->
-        <div class="col-md-4">
-          <div class="grid mask">
-            <figure>
-              <img class="img-responsive" src="../img/portfolio/folio06.jpg" alt="">
-              <figcaption>
-                <h5>PHONE MOCKUP</h5>
-                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-              </figcaption>
-              <!-- /figcaption -->
-            </figure>
-            <!-- /figure -->
-          </div>
-          <!-- /grid-mask -->
-        </div>
-        <!-- /col -->
-        <br>
-      </div>
-      <!-- /row -->
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /foliowrap -->
-
-
-  <section id="blog" name="blog"></section>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8 about">
-        <h3>Generate MNIST data by GAN Deep Learning</h3>
-
-        <h5>
-          <div id="divMnist">
-            <table class="mnistTableT">
-              <th class=mnistTable>MNIST Data</th>
-              <th class=mnistTable>Generated Data By GAN</th>
-              <tr>
-                <td><img class="mnist" src="../../static/onePage/img/mnistR.png" style=" width: 100%"></td>
-                <td>
-                  <img class="mySlides" src="../../static/onePage/img/kim1.png" style=" width: 100%">
-                  <img class="mySlides" src="../../static/onePage/img/kim2.png" style=" width: 100%">
-                  <img class="mySlides" src="../../static/onePage/img/kim3.png" style=" width: 100%">
-
-
-                  <button class="w3-button w3-display-left mnistBtn" onclick="plusDivs(-1)">&#10094;</button>
-                  <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-                </td>
-              </tr>
-            </table>
-
-
-          </div>
-        </h5>
-        <br>
-        <br>
-
-        <!-- ACCORDION -->
-        <div class="accordion" id="accordion2">
-          <div class="accordion-group">
-            <div class="accordion-heading">
-
-            </div>
-            <!-- /accordion-heading -->
-            <div id="collapseOne" class="accordion-body collapse in">
-              <br>
-              <div class="accordion-inner">
-
-              </div>
-              <!-- /accordion-inner -->
-            </div>
-            <!-- /collapse -->
-          </div>
-          <!-- /accordion-group -->
-          <br>
-
-
-          <!-- /accordion-group -->
-          <br>
-
-
-          <!-- /accordion-group -->
-          <br>
-
-
-          <!-- /accordion-group -->
-          <br>
-        </div>
-        <!-- Accordion -->
-      </div>
-      <!-- /col-lg-6 -->
-
-      <div class="col-lg-3"></div>
-    </div>
-    <!-- /row -->
-  </div>
-  <!-- /container -->
-
-  <div id="testimonial">
-    <div class="container">
-      <div class="bs-example">
-        <div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
-
-
-          <br>
-          <br>
-          <br>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section id="contact" name="contact"></section>
-  <div id="footerwrap">
-    <div class="container">
-      <div class="col-lg-5">
-        <h3>Address</h3>
-        <p>
-          Av. Greenville 987,<br /> New York,<br /> 90873
-          <br /> United States
-        </p>
-      </div>
-
-      <div class="col-lg-7">
-        <h3>Drop Me A Line</h3>
-        <br>
-
-        <form class="contact-form php-mail-form" role="form" action="contactform/contactform.php" method="POST">
-
-          <div class="form-group">
-            <label for="contact-name">Your Name</label>
-            <input type="name" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4"
-              data-msg="Please enter at least 4 chars">
-            <div class="validate"></div>
-          </div>
-          <div class="form-group">
-            <label for="contact-email">Your Email</label>
-            <input type="email" name="email" class="form-control" id="contact-email" placeholder="Your Email" data-rule="email"
-              data-msg="Please enter a valid email">
-            <div class="validate"></div>
-          </div>
-          <div class="form-group">
-            <label for="contact-subject">Subject</label>
-            <input type="text" name="subject" class="form-control" id="contact-subject" placeholder="Subject" data-rule="minlen:4"
-              data-msg="Please enter at least 8 chars of subject">
-            <div class="validate"></div>
-          </div>
-
-          <div class="form-group">
-            <label for="contact-message">Your Message</label>
-            <textarea class="form-control" name="message" id="contact-message" placeholder="Your Message" rows="5"
-              data-rule="required" data-msg="Please write something for us"></textarea>
-            <div class="validate"></div>
-          </div>
-
-          <div class="loading"><img src="lib/php-mail-form/loading.gif"></div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your message has been sent. Thank you!</div>
-
-          <div class="form-send">
-            <button type="submit" class="btn btn-large">Send Message</button>
-          </div>
-
-        </form>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div id="copyrights">
-    <div class="container">
-      <p>
-        &copy; Copyrights <strong>Freelance</strong>. All Rights Reserved
-      </p>
-      <div class="credits">
-        <!--
-          You are NOT allowed to delete the credit link to TemplateMag with free version.
-          You can delete the credit link only if you bought the pro version.
-          Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/freelance-bootstrap-template/
-          Licensing information: https://templatemag.com/license/
-        -->
-        Created with Freelance template by <a href="https://templatemag.com/">TemplateMag</a>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- JavaScript Libraries -->
-  <!-- <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/php-mail-form/validate.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/chart/chart.js"></script>
-  <script src="lib/classie/classie.js"></script>
-  <script src="lib/gnmenu/gnmenu.js"></script> -->
-
-  <!-- Template Main Javascript File -->
-  <script src="../../static/onePage/js/main.js"></script>
 
 </body>
 
