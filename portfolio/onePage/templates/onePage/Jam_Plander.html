@@ -1,0 +1,99 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<div class="jamTab">
+        <button class="tablinks" id = "calendarTabBut" value = "calendarTabBut">Jam Calendar</button>
+        <button class="tablinks" id = "mapTabBut" value = "mapTabBut">Jam Map</button>
+</div>
+
+<div id="jamCalendarTab" class="tabcontent" value = "calendarTabBut">
+        <div id="divBox">
+            <h3 id="calendarHead1">Jam Calendar</h3>
+            <h4 id="calendarHead2">Share schedule with your friends!</h4>
+    
+            <div id="selectTableDiv">
+              <table id="selectTable">
+                <tr>
+                  <td>
+                    <div id="nowYear"></div>
+                  </td>
+                  <td>
+                    <div id="nowMonth"></div>
+                  </td>
+                  <td>
+                    <form>
+                      <input type="text" class="form-control" id="userIdInput" placeholder='아이디를 입력 하세요!'>
+                    </form>
+                  </td>
+                  <td>
+                    <form>
+                      <input type="button" class="btn btn-primary" id="userIdSave"" value=" 아이디선택" />
+                    </form>
+                  <td>
+                    <form>
+                      <input type="button" class="btn btn-primary" id="save" value="일정확정" />
+                    </form>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#layerpop">설명</button>
+                    <div class="modal" tabindex="-1" role="dialog" id="layerpop">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Jam Calendar 설명</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                              <h4>Jam Calendar</h4>
+                              Jam Calendar는 친구들 혹은 동료들과 일정을 정하고 싶을 때, 편의를 제공하는 달력입니다. <br>
+                              1. 아이디를 입력하세요.<br>
+                              2. 자신이 원하는 년도, 월을 고르세요.<br>
+                              3. 자신이 원하는 일에 마우스를 올려보세요.<br>
+                              4. 좋아요 버튼을 눌러보세요.<br>
+                              5. 이제 본인의 아이디와 좋아수가 출력됩니다.<br>
+                              6. 가장 많은 좋아요를 받은 일을 확정시켜보아요.<br>
+                              7. 일정 확정 버튼을 누르고 해당 일을 누르면 일정이 확정됩니다.
+                              <h4>이제 친구들과 일정을 쉽게 정해보세요!</h4>
+                            </p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+    
+    
+    
+            <!-- <div id="calendarDiv"></div> -->
+            <div id="calendar"></div>
+            {%csrf_token%}
+          </div>
+          <br>
+          <br>
+      </div>
+
+      <div id="jamMapTab" class="tabcontent" value = "mapTabBut">
+        <h3>Jam Map</h3>
+
+      </div>

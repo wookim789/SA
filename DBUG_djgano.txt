@@ -1,0 +1,6 @@
+django 버그 리스트
+1. 버튼 이벤트, form submit 이벤트든 통신시 무조건 CSRF 태그를 달아야 문제가 없다.
+
+html 버그 리스트
+2. form input text의 데이터 - 서버에서 접근 은 form의 name 태그의 속성으로 접근한다.
+3. form 태그가 여러개 일때 name이 같은 input이 여러개면 request에 데이터가 list로 들어간다. - 꼭 주의하자

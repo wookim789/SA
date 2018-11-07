@@ -172,7 +172,6 @@ function printSelectDateAjax(year, month) {
 			});
 		},
 		error: function () {
-
 			alert("통신실패");
 		}
 	});
@@ -413,8 +412,8 @@ function calcCalendar(year, month) {
 	}
 
 	html += '</table>'
-
-	calendarDiv.innerHTML = html;
+	//html 삽입하는 부분
+	//calendarDiv.innerHTML = html;
 }
 
 // 현재 년도부터 10년치 년도 선택

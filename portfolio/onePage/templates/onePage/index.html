@@ -14,7 +14,7 @@
 
   <!-- Main Stylesheet File -->
   <link href='{% static "onePage/css/style.css"%}' rel="stylesheet">
-  
+
   <!-- Bootstrap CSS File -->
   <link href='{% static "onePage/lib/bootstrap/css/bootstrap.min.css"%}' rel="stylesheet">
 
@@ -24,7 +24,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <script src='{%static "onePage/js/login.js"%}'></script>
-
+  <script src ='{%static "onePage/js/sign_up.js"%}'></script>
   <!-- =======================================================
     Template Name: Freelance
     Template URL: https://templatemag.com/freelance-bootstrap-template/
@@ -34,69 +34,88 @@
 </head>
 
 
-<div id = "loginDiv">
-            
-    <form id = "loginForm" action="/onePage/login/" method="POST">
-      {%csrf_token%}
-      <table>
-        <th>LogIn</th>
-        <tr>
-          <td>   
-            <input id = "loginId" type="text" name="userId" placeholder="Id" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input id = "loginPw" type="password" name="userPw"  placeholder="Password" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button class ="btn btn-secondary loginBoxBut" id = "logInBtn" >LogIn</button>
-            <!-- <button class ="btn btn-secondary loginBoxBut" type = "submit" id = "logInBut" >LogIn</button> -->
-            <button type="button" class="btn btn-default signUp" data-toggle="modal" data-target="#layerpop">signUp</button>
-            
-            <div class="modal" tabindex="-1" role="dialog" id="layerpop">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">signUp</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <label>Please write your Id</label>
-                        <input id = "userId" type= "text" name = "userID" placeholder="Id">
-                        <label>Please write your Password</label>
-                        <input id = "userPw" type= "password" name = "userPW" placeholder="password">
-                        <label>Please write your Email</label>
-                        <input id = "email" type= "text" name = "email" placeholder="email">
-                        
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <table>
-                        <tr><button class = "btn btn-secondary signUpBtn" type="submit">signUp</button></tr>
-                        <tr><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></tr>
-                      </table>
-                  
-                    </div>
-                  </div>
+<div id="loginDiv">
+
+  <form id="login-form" action="/onePage/login/" method="POST">
+    {%csrf_token%}
+    <table>
+      <th>LogIn</th>
+      <tr>
+        <td>
+          <input id="login-id" type="text" name="login-id-val" placeholder="Id" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input id="login-pw" type="password" name="login-pw-val" placeholder="Password" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn btn-secondary login-box-btn" id="login-btn">OK</button>
+          <!-- <button class ="btn btn-secondary loginBoxBut" type = "submit" id = "logInBut" >LogIn</button> -->
+          <button type="button" id = "sign-modal" class="btn btn-default signUp" data-toggle="modal" data-target="#layerpop">signUp</button>
+
+          <div class="modal" tabindex="-1" role="dialog" id="layerpop">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">signUp</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="sign-form" action="/onePage/signUp/" method="POST">
+                    {%csrf_token%}
+                    <table>
+                      <tr>
+                        <td>
+                          <label>Please write your Id</label>
+                          <input id="sign-id" type="text" name="sign-id-val" placeholder="Id">
+                        </td>
+                        <td>
+                          {%csrf_token%}
+                          <button type ="button" class="btn btn-secondary" id="id-check">Check</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label>Please write your Password</label>
+                          <input id="sign-pw" type="password" name="sign-pw-val" placeholder="password">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label>Please write your Email</label>
+                          <input id="sign-email" type="text" name="sign-email-val" placeholder="email">
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <table>
+                    {%csrf_token%}
+                    <tr><button type = "button" class="btn btn-secondary signUpBtn" id="sign-up-btn">sign Up</button></tr>
+                    <tr><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></tr>
+                  </table>
+
                 </div>
               </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            
-          </td>
-        </tr>
-      </table>
-    
-  </form>              
-      
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+
+        </td>
+      </tr>
+    </table>
+
+  </form>
+
 </div>
 
 

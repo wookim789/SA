@@ -55,7 +55,7 @@ def loadCalendar(request):
 def selectCalendar(request):
     bemodel = models.SelectDate.objects.filter(userId=request.POST['user_ID'],
                                                selectDate=request.POST["selectDate"])
-    logging.debug(bemodel)
+    #logging.debug(bemodel)
     if not bemodel.exists():
         bemodel = models.SelectDate.objects.filter(
             selectDate=request.POST['selectDate'])

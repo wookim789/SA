@@ -14,6 +14,11 @@ $(document).ready(function( ) {
   var slideIndex = 1;
   showDivs(slideIndex);
   
+  $("#logout-link").click(function(){
+    alert("logout");
+    $(location).attr('href',"/../");
+  })
+
 	// Smooth scroll for the menu and links with .scrollto classes
   $('.smoothscroll').on('click', function(e) {
     e.preventDefault();
@@ -70,12 +75,11 @@ $(document).ready(function( ) {
 		//var myDoughnut = new Chart(document.getElementById("canvas2").getContext("2d")).Doughnut(doughnutData);
   }
 
-  $(".tablinks").click(function(){
-    //console.log($(this).attr('value'))
-    jamTab(event, $(this).attr("value"))
-  
-  })
-  document.getElementById("makeTeamTabBut").click();
+   $(".tablinks").click(function(){
+      //console.log($(this).attr('value'))
+      jamTab(event, $(this).attr("value"))
+    })
+  document.getElementById("make-team-tab-btn").click();
 // When the user clicks anywhere outside of the modal, close it
 
 });
@@ -102,12 +106,12 @@ function jamTab(evt, tabId) {
  
   tabID = tabId
 
-  //console.log(tabID)
+ // console.log(tabID)
   // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
       //console.log("tab = " + tabcontent[i].id)
-      //console.log(tabcontent[i].getAttribute("value"))
+     // console.log(tabcontent[i].getAttribute("value"))
       if(tabcontent[i].getAttribute("value")==tabID){
         tabcontentID = tabcontent[i].id;
         //console.log("tab 33= "+ tabcontentID);
@@ -120,15 +124,17 @@ function jamTab(evt, tabId) {
 
   for (i = 0; i < tablinks.length; i++) {
       //console.log(tablinks[i])
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+      tablinks[i].className = tablinks[i].className.replace("active", "");
   }
   //
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById("calendarTabBut").disabled= true;
-  document.getElementById("mapTabBut").disabled= true;
-  document.getElementById("makeTeamTabBut").disabled=false;
+  
+  document.getElementById("make-team-tab-btn").disabled= false;
+  document.getElementById("search-team-tab-btn").disabled= false;
+  document.getElementById("manage-team-tab-btn").disabled=false;
+  document.getElementById("message-team-tab-btn").disabled=false;
 
   document.getElementById(tabcontentID).style.display = "block";
-  evt.currentTarget.className += " active";
+  evt.currentTarget.className += "active";
 
 }
