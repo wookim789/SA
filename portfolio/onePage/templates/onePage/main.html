@@ -31,6 +31,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
   <!-- <script src='{%static "onePage/js/calendarJs.js"%}'></script> -->
+  <script src = '{%static "onePage/js/makeTeam.js"%}'></script>
   <!-- =======================================================
     Template Name: Freelance
     Template URL: https://templatemag.com/freelance-bootstrap-template/
@@ -38,7 +39,9 @@
     License: https://templatemag.com/license/
   ======================================================= -->
 </head>
-
+<form>
+  <input type="hidden" id = "hiddenUserId" value= "{{request.session.userId}}">
+</form>
 <body data-spy="scroll" data-offset="0" data-target="#gn-menu">
   <!-- ========== MAIN MENU ========== -->
   <div class="container">
@@ -81,34 +84,89 @@
       <!-- Tab content -->
       <div id="make-team-tab" class="tabcontent" value="make-team-tab-btn">
         <div>
-          <table>
+          <table id = "make-team-main-table">
             <tr>
               <td>
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Team List
                     <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">HTML</a></li>
+                    <ul class="dropdown-menu" id ="tema-list-dropdown">
+                      <!-- <li><a href="#"></a></li> -->
                     </ul>
                   </div>
               </td>
               <td>
-                <button id = "make-team-btn" class = "btn btn-primary btn-lg">Make Team</button>
+                <!-- <button id = "make-team-btn" class = "btn btn-primary btn-lg">Make Team</button> -->
+              <button type="button" id="make-team-btn" class="btn btn-default signUp" data-toggle="modal" data-target="#layerpop">Make Team</button>
+
+              <div class="modal teamModal" tabindex="-1" role="dialog" id="layerpop">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Make Team</h5>
+                      <button type="button" class="btn btn-default close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="make-team-form" action="/onePage//" method="POST">
+                        {%csrf_token%}
+                        <table>
+                          <tr>
+                            <td>
+                              <label>Please write your Team Name</label>
+                              <input id="make-team-name-input" type="text" name="sign-id-val" placeholder="Team Name">
+                            </td>
+                            <td>
+                              {%csrf_token%}
+                              <button type="button" class="btn btn-default" id="team-check">Check</button>
+                            </td>
+                          </tr>
+                        </table>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <table>
+                        {%csrf_token%}
+                        <tr><button type="button" class="btn btn-default signUpBtn" id="make-tema-name-btn">OK</button></tr>
+                        <tr><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></tr>
+                      </table>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
               </td>
-            </tr>
-            <tr>
-              <td>Plan Board</td>
             </tr>
             <tr>
               <td>
-                <table id = "plan-list-board">
-                  <tr>
-                    <tr><th>No.</th><th>Plan Name</th></tr>
-                  </tr>
-                </table>
+                <h3>
+                  Plan Board
+                </h3>
+              </td>
+              <td>
+                <button class="btn btn-primary btn-lg">
+                  Add Plan
+                </button>
               </td>
             </tr>
           </table>
+          <table id = "plan-list-board" class="table">
+              <tr>
+                <td id = "plan-board-no">
+                  No.
+                </td>
+                <td id = "plan-board-name">
+                  Plan Name
+                </td>
+                <td id = "plan-board-del-btn">
+                  Delete Plan 
+                </td>
+              </tr>
+              <tr>
+           
+              </tr>
+            </table>
         </div>
         
       </div>

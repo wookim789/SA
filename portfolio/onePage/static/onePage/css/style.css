@@ -5,6 +5,20 @@
 * License: https://templatemag.com/license/
 */
 
+#plan-board-no{
+  width: 20%;
+}
+#plan-board-name{
+  width: 70%;
+}
+#plan-board-del-btn{
+  width: 10%;
+}
+
+
+#make-team-main-table{
+  margin-left: 40%;
+}
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
@@ -53,6 +67,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* Style the tab content */
 .tabcontent {
+  width: 100%;
   display: none;
   padding: 6px 12px;
   border: 1px solid #ccc;

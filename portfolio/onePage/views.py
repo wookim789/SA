@@ -12,7 +12,6 @@ logging.basicConfig(filename='./test.log', level=logging.DEBUG)
 
 
 def index(request):
-    request.session['logInState'] = 'logOut'
     return render(request, 'onePage/index.html')
 
 
@@ -55,7 +54,7 @@ def loadCalendar(request):
 def selectCalendar(request):
     bemodel = models.SelectDate.objects.filter(userId=request.POST['user_ID'],
                                                selectDate=request.POST["selectDate"])
-    #logging.debug(bemodel)
+    logging.debug(bemodel)
     if not bemodel.exists():
         bemodel = models.SelectDate.objects.filter(
             selectDate=request.POST['selectDate'])
@@ -92,9 +91,6 @@ def fixcal(request):
         bemodel = models.SelectDate.objects.filter(
             selectDate=request.POST["selectDate"])
         if bemodel.exists():
-            bemodel = models.SelectDate.objects.filter(
-                selectDate=request.POST["selectDate"])
-
             bemodel.update(confirmIndicator=1)
             answer = {"requset": "일정확정"}
         else:
