@@ -4,6 +4,7 @@ $(document).ready(function () {
     loadTeamList();
     teamNameCheck();
     makeTeam();
+    
 })
 function makeTeam(){
     $("#make-tema-name-btn").click(function(){
@@ -21,10 +22,11 @@ function makeTeam(){
                         $(".teamModal").modal('hide')
                         $("#tema-list-dropdown").empty();
                         loadTeamList();
+                    }else if(str.result=="teamNumOutOfRange"){
+                        alert("팀은 최대 3개만 가입 할 수 있습니다.");
                     }else{
                         alert("통신 실패");
                     }
-
                     
                 },
                 error: function(str){
@@ -87,8 +89,9 @@ function loadTeamList() {
             console.log("json data loaded")
             var j = 0;
             $.each(str, function (index, item) {
-                $("#tema-list-dropdown").append('<li><a href="#">' + item.teamName + '</a></li>')
-            })
+                $("#tema-list-dropdown").append('<li><a class ="team-list-li" href="#">' + item.teamName + '</a></li>')
+            });
+            makePlanBoard();
         },
         error: function () {
             console.log("json data load fail")

@@ -8,7 +8,7 @@ $(document).ready(function () {
 
         if(userId!=""){
             if(userPw!=""){
-                alert(userId);
+                //alert(userId);
                 $("#login-form").submit();
             }else{
                 alert("비밀번호를 입력하세요.")

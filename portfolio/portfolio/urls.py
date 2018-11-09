@@ -5,6 +5,7 @@ from onePage import views
 from onePage import login
 from onePage import signUp
 from onePage import mainPageTeam
+from onePage import mainPagePlan
 
 if settings.DEBUG:
     import debug_toolbar
@@ -21,6 +22,7 @@ if settings.DEBUG:
         path('onePage/loadTeamNameList/', mainPageTeam.loadTeamNameList),
         path('onePage/checkTeamName/', mainPageTeam.checkTeamName),
         path('onePage/makeTeam/', mainPageTeam.makeTeam),
+        path('onePage/planListClick/',mainPagePlan.planListClick)
 
         # For django versions before 2.0:
         # url(r'^__debug__/', include(debug_toolbar.urls)),
