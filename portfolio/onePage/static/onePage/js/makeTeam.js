@@ -88,10 +88,11 @@ function loadTeamList() {
         success: function (str) {
             console.log("json data loaded")
             var j = 0;
+            str = JSON.parse(str);
             $.each(str, function (index, item) {
-                $("#tema-list-dropdown").append('<li><a class ="team-list-li" href="#">' + item.teamName + '</a></li>')
+                $("#tema-list-dropdown").append('<li><a class ="team-list-li" href="#">' + item.fields.teamName + '</a></li>')
             });
-            makePlanBoard();
+            printPlanBoard();
         },
         error: function () {
             console.log("json data load fail")

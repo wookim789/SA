@@ -15,11 +15,11 @@ class TeamInfo(models.Model):
     userId = models.CharField(max_length=10)
     leader = models.IntegerField(default=0)
 
-  
+
 class TemaPlanList(models.Model):
-    teamName = models.CharField(max_length=10)
     teamPlanNo = models.IntegerField(default=0)
     teamPlanName = models.CharField(max_length=10)
+    teamName = models.CharField(max_length=10)
 
 
 class SelectDate(models.Model):

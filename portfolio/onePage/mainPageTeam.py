@@ -3,28 +3,22 @@ from django.http import JsonResponse
 # from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from . import models
+from django.core import serializers
 
 
 @csrf_exempt
+# 유저의 팀 리스트를 보여주기 위함
 def loadTeamNameList(request):
     print("access load team list")
     if request.POST:
         if 'userId' in request.POST:
             try:
-                teamListModel = models.TeamInfo.objects.filter(
-                    userId=request.POST.get('userId')
-                )
-                if teamListModel.exists():
-                    result = []
-                    for i in teamListModel:
-                        result.append({
-                            'teamName': i.teamName,
-                        })
-                    print("return team name")
-                    return JsonResponse(result, safe=False)
-                else:
-                    print("No have team ")
-                    return JsonResponse({"result": "No have Team"}, safe=False)
+                print(request.POST.get('userId'))
+                # 시리얼 라이즈를 통해 db에서 읽어온 데이터를 바로 json 형태로 변환하여 response객체 전송
+                teamListModel = serializers.serialize('json',
+                                                      models.TeamInfo.objects.filter(userId=request.POST.get('userId')))
+                print("return resoponse"+teamListModel)
+                return JsonResponse(teamListModel, safe=False)
             except IOError:
                 print("DB access eror")
                 return JsonResponse({"result": False}, safe=False)
@@ -38,7 +32,7 @@ def checkTeamName(request):
     if request.POST:
         if 'teamName' in request.POST:
             try:
-                print(request.POST.get("teamName"))
+                # print(request.POST.get("teamName"))
                 teamListModel = models.TeamInfo.objects.filter(
                     teamName=request.POST.get('teamName')
                 )

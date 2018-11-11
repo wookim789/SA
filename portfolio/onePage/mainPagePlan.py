@@ -2,33 +2,21 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from . import models
 from django.http import HttpResponse
-import django.core.serializers as dcs
+from django.core import serializers
 
 
 @csrf_exempt
 def planListClick(request):
     print(request.POST)
+    print(request.POST.get("teamName"))
     print("planListClik")
     if request.POST:
         if "teamName" in request.POST:
             try:
-                planModel = dcs.serialize('json',
-                                          [models.TemaPlanList.objects.filter(teamName=request.POST.get("teamName"))])
-                # s is a string with [] around it, so strip them off
-                o = planModel.strip("[]")
-
-                return HttpResponse(o, mimetype="application/json")
-
-                # for i in planModel.count():
-                #      result = {"": }
-
-                # for i in planModel:
-                #     result.append({"planNo": i.teamPlanNo,
-                #                    "planName": i.teamPlanName})
-                # if result == []:
-                #     return JsonResponse({"result": "NoResultData"}, safe=False)
-                # print("data send")
-                # return JsonResponse(result, safe=False)
+                planModel = serializers.serialize('json',
+                                                  models.TemaPlanList.objects.filter(teamName=request.POST.get("teamName")))
+                print("return resoponse")
+                return JsonResponse(planModel, safe=False)
             except IOError:
                 print("db error")
                 return JsonResponse({"result": "DBerror"}, safe=False)
@@ -36,5 +24,23 @@ def planListClick(request):
             print("No data")
             return JsonResponse({"result": "NoData"}, safe=False)
     else:
-        print("Not Post Acess")
+        print("Not Post Access")
         return JsonResponse({"result": "NotPostAcess"}, safe=False)
+
+
+@csrf_exempt
+def planNameAdd(request):
+    print("planNameAdd")
+
+    if request.POST:
+        if "plan-name-val" in request.POST:
+            try:
+                planModel = models.TemaPlanList(
+                    teamName=request.POST.get("team-name-plan-val"),
+                    teamPlanName=request.POST.get("plan-name-val")
+                )
+                planModel.save()
+                return JsonResponse({"result": True}, safe=False)
+            except IOError:
+                return JsonResponse({"result": False}, safe=False)
+        

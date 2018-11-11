@@ -22,11 +22,9 @@ if settings.DEBUG:
         path('onePage/loadTeamNameList/', mainPageTeam.loadTeamNameList),
         path('onePage/checkTeamName/', mainPageTeam.checkTeamName),
         path('onePage/makeTeam/', mainPageTeam.makeTeam),
-        path('onePage/planListClick/',mainPagePlan.planListClick)
+        path('onePage/planListClick/', mainPagePlan.planListClick),
+        path('onePage/planNameAdd/', mainPagePlan.planNameAdd),
 
         # For django versions before 2.0:
         # url(r'^__debug__/', include(debug_toolbar.urls)),
-    ] 
-
-
-
+    ]
