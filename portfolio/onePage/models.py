@@ -17,7 +17,7 @@ class TeamInfo(models.Model):
 
 
 class TemaPlanList(models.Model):
-    teamPlanNo = models.IntegerField(default=0)
+    teamPlanNo = models.IntegerField(primary_key=True)
     teamPlanName = models.CharField(max_length=10)
     teamName = models.CharField(max_length=10)
 

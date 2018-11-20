@@ -8,6 +8,7 @@ function addPlan(){
     $("#add-plan-btn").click(function(){
         var teamName = $("#plan-name-head").text();  
         $("#team-name-plan").attr('placeholder',teamName);
+        $("#team-name-plan").attr('value',teamName);
     });
 }
 function printPlanBoard(){
@@ -34,7 +35,7 @@ function printPlanBoard(){
                 $("#plan-list-board").append(html);
             },
             error:function(str){
-                alert("통신 실패");
+                alert("플랜이 없습니다.");
             }
         });
     });

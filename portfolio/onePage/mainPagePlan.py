@@ -31,7 +31,8 @@ def planListClick(request):
 @csrf_exempt
 def planNameAdd(request):
     print("planNameAdd")
-
+    print(request.POST.get("team-name-plan-val"))
+    print(request.POST.get("plan-name-val"))
     if request.POST:
         if "plan-name-val" in request.POST:
             try:
