@@ -1,7 +1,8 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from . import models
-from django.http import HttpResponse
+from django.shortcuts import render
+#from django.http import HttpResponse
 from django.core import serializers
 
 
@@ -15,6 +16,13 @@ def planListClick(request):
             try:
                 planModel = serializers.serialize('json',
                                                   models.TemaPlanList.objects.filter(teamName=request.POST.get("teamName")))
+                userAuthority = models.TeamInfo.objects.get(teamName=request.POST.get("teamName"),
+                                                               userId=request.POST.get("userId"))
+                print(userAuthority.leader)
+                request.session['leader'] = userAuthority.leader
+
+                print("check model json data--------------------")
+                #print(planModel)
                 print("return resoponse")
                 return JsonResponse(planModel, safe=False)
             except IOError:
@@ -31,17 +39,29 @@ def planListClick(request):
 @csrf_exempt
 def planNameAdd(request):
     print("planNameAdd")
-    print(request.POST.get("team-name-plan-val"))
-    print(request.POST.get("plan-name-val"))
     if request.POST:
-        if "plan-name-val" in request.POST:
+        if "planName" in request.POST:
             try:
                 planModel = models.TemaPlanList(
-                    teamName=request.POST.get("team-name-plan-val"),
-                    teamPlanName=request.POST.get("plan-name-val")
+                    teamName=request.POST.get("teamName"),
+                    teamPlanName=request.POST.get("planName")
                 )
                 planModel.save()
                 return JsonResponse({"result": True}, safe=False)
             except IOError:
+                print("plan 저장실패")
                 return JsonResponse({"result": False}, safe=False)
-        
+    else:
+        print("plan 저장실패")
+        return JsonResponse({"result": False}, safe=False)
+
+
+# @csrf_exempt
+# def delPlan(request):
+#     print("delPlan")
+#     if request.POST:
+#         if "planNo" in request.POST:
+#             try:
+#                 planModel = models.TemaPlanList(
+#                     planNo=request.POST.get("planNo"))
+#                 planListClick.delete()

@@ -31,7 +31,7 @@ def signUp(request):
                                      teamCount=0)
 
         signModel.save()
-        print(signModel)
+        #print(signModel)
         return JsonResponse({"result": True}, safe=False)
     except IOError:
         print("저장 실패")

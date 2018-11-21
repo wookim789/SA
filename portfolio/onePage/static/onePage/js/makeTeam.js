@@ -90,7 +90,7 @@ function loadTeamList() {
             var j = 0;
             str = JSON.parse(str);
             $.each(str, function (index, item) {
-                $("#tema-list-dropdown").append('<li><a class ="team-list-li" href="#">' + item.fields.teamName + '</a></li>')
+                $("#tema-list-dropdown").append('<li><a id = "team-list-'+item.fields.teamName+'" class ="team-list-li" href="#">' + item.fields.teamName + '</a></li>')
             });
             printPlanBoard();
         },

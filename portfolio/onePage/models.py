@@ -11,7 +11,7 @@ class UserCount(models.Model):
 
 
 class TeamInfo(models.Model):
-    teamName = models.CharField(max_length=10)
+    teamName = models.CharField(max_length=10, null=True)
     userId = models.CharField(max_length=10)
     leader = models.IntegerField(default=0)
 
@@ -19,10 +19,11 @@ class TeamInfo(models.Model):
 class TemaPlanList(models.Model):
     teamPlanNo = models.IntegerField(primary_key=True)
     teamPlanName = models.CharField(max_length=10)
-    teamName = models.CharField(max_length=10)
+    teamName = models.CharField(max_length=10, null=True)
 
 
 class SelectDate(models.Model):
+    teamName = models.CharField(max_length=10, null=True)
     teamPlanNo = models.IntegerField(default=0)
     userId = models.CharField(max_length=10)
     selectDate = models.CharField(max_length=10)
@@ -31,6 +32,7 @@ class SelectDate(models.Model):
 
 
 class PlanMap(models.Model):
+    teamName = models.CharField(max_length=10, null=True)
     teamPlanNo = models.IntegerField(default=0)
     selectDate = models.CharField(max_length=10)
     userId = models.CharField(max_length=10)
