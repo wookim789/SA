@@ -24,6 +24,7 @@ if settings.DEBUG:
         path('onePage/makeTeam/', mainPageTeam.makeTeam),
         path('onePage/planListClick/', mainPagePlan.planListClick),
         path('onePage/planNameAdd/', mainPagePlan.planNameAdd),
+        path('onePage/delPlan/', mainPagePlan.delPlan),
 
         # For django versions before 2.0:
         # url(r'^__debug__/', include(debug_toolbar.urls)),

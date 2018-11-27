@@ -13,11 +13,9 @@ def loadTeamNameList(request):
     if request.POST:
         if 'userId' in request.POST:
             try:
-                print(request.POST.get('userId'))
                 # 시리얼 라이즈를 통해 db에서 읽어온 데이터를 바로 json 형태로 변환하여 response객체 전송
                 teamListModel = serializers.serialize('json',
                                                       models.TeamInfo.objects.filter(userId=request.POST.get('userId')))
-                print("return resoponse"+teamListModel)
                 return JsonResponse(teamListModel, safe=False)
             except IOError:
                 print("DB access eror")
@@ -54,7 +52,7 @@ def makeTeam(request):
     if request.POST:
         if ('teamName' in request.POST) and ('userId' in request.POST):
             try:
-                print(request.POST.get("teamName"))
+
                 checkTeamNum = models.TeamInfo.objects.filter(
                     userId=request.POST.get("userId")
                 )
@@ -65,7 +63,6 @@ def makeTeam(request):
                         leader=1
                     )
                     teamModel.save()
-                    print(teamModel)
                     return JsonResponse({'result': True}, safe=False)
                 return JsonResponse({'result': "teamNumOutOfRange"}, safe=False)
             except IOError:
