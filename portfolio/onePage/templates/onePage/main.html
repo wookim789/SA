@@ -40,11 +40,14 @@
     License: https://templatemag.com/license/
   ======================================================= -->
 </head>
-<form>
-  <input type="hidden" id="hiddenUserId" value="{{request.session.userId}}">
-  <input type="hidden" id ="hiddenUserLeader" value ="{{request.session.leader}}">
-</form>
-
+<div id = "session-div">
+  <form id="session-form">
+    <input type="hidden" id="hiddenUserId" value="{{request.session.userId}}">
+    <input type="hidden" id="hiddenUserLeader" value="{{request.session.leader}}">
+    <input type="hidden" id="hiidenPageNum" value="{{request.session.planPageNum}}">
+    <input type="hidden" id="hiddenPageDivNum" value="{{request.session.planPageDivNum}}">
+  </form>
+</div>
 <body data-spy="scroll" data-offset="0" data-target="#gn-menu">
   <!-- ========== MAIN MENU ========== -->
   <div class="container">

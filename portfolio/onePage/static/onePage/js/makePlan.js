@@ -74,12 +74,15 @@ function attrPlan() {
         $("#team-name-plan").attr('value', teamName);
     });
 }
+
+//팀 선택시 해당 팀의 플랜 출력
 function printPlanBoard() {
     $(".team-list-li").on("click", function () {
         printPlanFunctuon($(this).text());
     });
 }
 
+//플랜을 출력하는 함수
 function printPlanFunctuon(teamName) {
     $("#plan-name-head").empty();
     $("#plan-name-head").append($(this).text());
@@ -96,6 +99,7 @@ function printPlanFunctuon(teamName) {
             "userId": $("#hiddenUserId").val()
         },
         success: function (str) {
+
             console.log("플랜 데이터 가져오기 성공");
             var html =
                 '<tr>' +
@@ -112,10 +116,11 @@ function printPlanFunctuon(teamName) {
                     '<td><button class ="btn btn-primary plan-delete-btn"  id = "plan-board-del-btn-' + item.pk + '" value = "' + item.pk + '">Delete Plan</button></td>' +
                     '</tr>';
             });
+            $("#session-div").load('main.html');
             $("#plan-name-head").append("<h1 id = 'h1-teamName'>" + teamName + "</h1>");
             //$("#plan-table-tr").append(html);
-
-            $("#plan-list-board").append(html);
+            
+            $("#plan-list-board").append(pagePro($("#hiidenPageNum").val(), html));
             if ($("#hiddenUserLeader").val() != "1") {
                 $(".plan-delete-btn").attr("disabled", "disabled");
             }
@@ -124,4 +129,30 @@ function printPlanFunctuon(teamName) {
             alert("플랜이 없습니다.");
         }
     });
+}
+
+//게시판 페이지 처음 로드 할 때 
+//num : page 수 
+function pagePro(num, html){
+    //page수가 11보다 작을 때
+    if(num < 11){
+        html += '<tr>';
+        for(var i = 1 ; i <= num ; i++){
+           html += '<td> '+ String(i) +' </td>';
+        }
+        html += "</tr>";
+        return html;
+    //페이지 수가 10보다 클 때
+    }else{
+        html += '<tr>';
+        for(var i = 1 ; i <= num ; i++){
+           html += '<td> '+ String(i) +' </td>';
+        }
+        html += "<td><button id = 'next-page-but'>다음</button></td></tr>";
+        return html;
+    }
+}
+
+function pageDivPro(num, html){
+
 }

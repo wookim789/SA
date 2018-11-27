@@ -1,24 +1,53 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from . import models
-from django.shortcuts import render
+
 from django.core import serializers
-import logging as log
+# import logging as log
+# from django.shortcuts import render
+# from django.http import HttpResponse
 
-#from django.http import HttpResponse
 
+
+# 페이지 수
+def pageNum(x): return int(x / 10) if x % 10 == 0 else int(x/10) + 1
 
 @csrf_exempt
 def planListClick(request):
-    #log.debug("planListClick")
+
+    # log.debug("planListClick")
     if request.POST:
         if "teamName" in request.POST:
             try:
+                # 팀네임이 일치하는 플랜 가져오기
+                planModelObj = models.TemaPlanList.objects.filter(
+                    teamName=request.POST.get("teamName")).order_by('-teamPlanNo')
+
+                # 플랜 게시글 수
+                planCountNum = planModelObj.count()
+
+                # 플랜 페이지 수 계산
+                planPageNum = pageNum(planCountNum)
+
+                # 플랜 페이지 수 10개씩 계산
+                planPageDivNum = pageNum(planPageNum)
+
+                planModelObj = models.TemaPlanList.objects.filter(
+                    teamName=request.POST.get("teamName")).order_by('-teamPlanNo')[:10]
+
                 planModel = serializers.serialize('json',
-                                                  models.TemaPlanList.objects.filter(teamName=request.POST.get("teamName")))
+                                                  planModelObj)
+                # print(planModelObj)
+                # planModel = planModel.update(
+                #     )
                 userAuthority = models.TeamInfo.objects.get(teamName=request.POST.get("teamName"),
                                                             userId=request.POST.get("userId"))
-
+                # print(planModel)
+                del request.session['planPageNum']
+                del request.session['planPageDivNum']
+                del request.session['leader']
+                request.session['planPageNum'] = planPageNum
+                request.session['planPageDivNum'] = planPageDivNum
                 request.session['leader'] = userAuthority.leader
                 return JsonResponse(planModel, safe=False)
             except IOError:
@@ -34,7 +63,8 @@ def planListClick(request):
 
 @csrf_exempt
 def planNameAdd(request):
-    #log.debug("planNameAdd")
+
+    # log.debug("planNameAdd")
     if request.POST:
         if "planName" in request.POST:
             try:
@@ -55,7 +85,8 @@ def planNameAdd(request):
 
 @csrf_exempt
 def delPlan(request):
-    #log.debug("delete Plan")
+
+    # log.debug("delete Plan")
     if request.POST:
         if "planNo" in request.POST:
             try:
@@ -78,7 +109,7 @@ def delPlan(request):
                     teamPlanNo=planNo
                 )
                 planMap.delete()
-                
+
                 return JsonResponse({"result": True}, safe=False)
             except IOError:
                 print("db error")
