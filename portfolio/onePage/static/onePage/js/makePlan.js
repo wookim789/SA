@@ -85,6 +85,7 @@ function printPlanBoard() {
 //플랜을 출력하는 함수
 function printPlanFunctuon(teamName) {
     $("#plan-name-head").empty();
+    $("#plan-paging").empty();
     $("#plan-name-head").append($(this).text());
     $("#plan-board-div").show();
     $("#plan-list-board").empty();
@@ -129,7 +130,8 @@ function printPlanFunctuon(teamName) {
             $("#plan-name-head").append("<h1 id = 'h1-teamName'>" + teamName + "</h1>");
             //$("#plan-table-tr").append(html);
             
-            $("#plan-list-board").append(pagePro(pageNum, html));
+            $("#plan-list-board").append(html);
+            $("#plan-paging").append(pagePro(pageNum, ""))
             if ($("#hiddenUserLeader").val() != "1") {
                 $(".plan-delete-btn").attr("disabled", "disabled");
             }
@@ -145,23 +147,50 @@ function printPlanFunctuon(teamName) {
 function pagePro(num, html){
     //page수가 11보다 작을 때
     if(num < 11){
+        //html += '<table><tr>';
         html += '<tr>';
         for(var i = 1 ; i <= num ; i++){
-           html += '<td> '+ String(i) +' </td>';
+           html += '<td class ="page-btn-class" id = "page-'+String(i)+'"> '+ String(i) +' </td>';
         }
+        //html += "</tr></table>";
         html += "</tr>";
         return html;
     //페이지 수가 10보다 클 때
     }else{
-        html += '<tr>';
-        for(var i = 1 ; i <= num ; i++){
-           html += '<td> '+ String(i) +' </td>';
+        console.log(html);
+        //html += '<table><tr>';
+        html += "<tr>";
+        for(var i = 1 ; i <= 10 ; i++){
+           html += '<td class ="page-btn-class" id = "page-'+String(i)+'"> '+ String(i) +' </td>';
         }
+        //html += "<td><button id = 'next-page-but'>다음</button></td></tr></table>";
         html += "<td><button id = 'next-page-but'>다음</button></td></tr>";
+        console.log(html);
         return html;
     }
 }
 
-function pageDivPro(num, html){
+function pageLoadEvt(){
+    $(".page-btn-class").on("click",function(){
+        pageLoadPro($(this).text())
+    });
+}
 
+function pageLoadPro(num){
+    $.ajax({
+        url: '/onePage/loadPage/',
+        type: 'POST',
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charest=utf-8',
+        data: {
+            "teamName": $("#plan-name-head").text(),
+            "pageNum" : num
+        },
+        success: function (str) {
+            
+        },
+        error:function(str){
+
+        }
+    })
 }

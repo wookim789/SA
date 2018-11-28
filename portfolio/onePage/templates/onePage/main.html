@@ -117,7 +117,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form id="make-team-form" action="/onePage//" method="POST">
+                        <form id="make-team-form" action="/onePage/makeTeam/" method="POST">
                           {%csrf_token%}
                           <table>
                             <tr>
@@ -202,6 +202,9 @@
             <div id = 'plan-list-board-div'>
                 {%csrf_token%}
               <table id = "plan-list-board" class="table">
+
+              </table>
+              <table id = "plan-paging">
 
               </table>
             </div>

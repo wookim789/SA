@@ -8,9 +8,34 @@ from django.core import serializers
 # from django.http import HttpResponse
 
 
-
 # 페이지 수
 def pageNum(x): return int(x / 10) if x % 10 == 0 else int(x/10) + 1
+
+
+@csrf_exempt
+def loadPage(request):
+    print("load Page")
+    if request.POST:
+        if ("teamName" in request.POST) and ("pageNum" in request.POST):
+            try:
+                num = request.POST.get(pageNum)
+                startPage = num * 10 - 10
+                endPage = num * 10
+
+                planModel = serializers.serialize('json', planModel=TemaPlanList.objects.filter(
+                    teamName=request.POST.get("teamName"),).order_by('-teamPlanNo')[startPage:endPage])
+
+                return JsonResponse(planModel, safe=False)
+            except IOError:
+                print("IO exception")
+                return JsonResponse({"result": "IO exception"}, safe=False)
+        else:
+            print("request no data")
+            return JsonResponse({"result": "request no data"}, safe=False)
+    else:
+        print("not post access")
+        return JsonResponse({"result": "not post access"}, safe=False)
+
 
 @csrf_exempt
 def planListClick(request):
@@ -36,35 +61,37 @@ def planListClick(request):
                 planModelObj = models.TemaPlanList.objects.filter(
                     teamName=request.POST.get("teamName")).order_by('-teamPlanNo')[:10]
 
-                # 해당 플랜 객체 json 으로 시리얼 라이즈 
+                # 해당 플랜 객체 json 으로 시리얼 라이즈
                 planModel = serializers.serialize('json', planModelObj)
 
                 # 테이블 담은 객체 삭제
                 planModelObj = None
 
                 # json 데이터 끝부분 ]자르기
-                planModel = planModel.replace("]", "")       
+                planModel = planModel.replace("]", "")
 
                 # 팀 선택 시 해당 팀의 권한 정보 조회
                 userAuthority = models.TeamInfo.objects.get(teamName=request.POST.get("teamName"),
                                                             userId=request.POST.get("userId"))
-                
                 result = ""
-                #json 데이터 오른쪽 끝에 해당 데이터 붙히기
+
+                #json 데이터 끝에 페이지 정보 데이터 붙히기
                 if planModel == "[":
                     result = '{ "model" : "onePage.teamplanlist",' + \
-                            '"pk" : "p", ' + \
-                            '"fields" : {' + \
-                                            '"planPageNum" : "' + str(planPageNum) + \
-                                            '","planPageDivNum" : "' + str(planPageDivNum) + \
-                                            '","leader" :"' + str(userAuthority.leader) + '"}}]'
+                        '"pk" : "p", ' + \
+                        '"fields" : {' + \
+                        '"planPageNum" : "' + str(planPageNum) + \
+                        '","planPageDivNum" : "' + str(planPageDivNum) + \
+                        '","leader" :"' + \
+                        str(userAuthority.leader) + '"}}]'
                 else:
                     result = ',{ "model" : "onePage.teamplanlist",' + \
-                                '"pk" : "p", ' + \
-                                '"fields" : {' + \
-                                                '"planPageNum" : "' + str(planPageNum) + \
-                                                '","planPageDivNum" : "' + str(planPageDivNum) + \
-                                                '","leader" :"' + str(userAuthority.leader) + '"}}]'
+                        '"pk" : "p", ' + \
+                        '"fields" : {' + \
+                        '"planPageNum" : "' + str(planPageNum) + \
+                        '","planPageDivNum" : "' + str(planPageDivNum) + \
+                        '","leader" :"' + \
+                        str(userAuthority.leader) + '"}}]'
                 planModel += result
                 print(planModel)
                 # 이전의 권한 세션 삭제 및 갱신 -> html 문서의 hidden form 데이터 수정해야함. json 데이터에 붙힘.

@@ -22,19 +22,23 @@ function makeTeam(){
                         $(".teamModal").modal('hide')
                         $("#tema-list-dropdown").empty();
                         loadTeamList();
+                        teamNameCheckVal = false;
                     }else if(str.result=="teamNumOutOfRange"){
                         alert("팀은 최대 3개만 가입 할 수 있습니다.");
+                        teamNameCheckVal = false;
                     }else{
                         alert("통신 실패");
+                        teamNameCheckVal = false;
                     }
-                    
                 },
                 error: function(str){
                     alert("통신 실패")
+                    teamNameCheckVal = false;
                 }
             })
+        }else{
+            alert("아이디 중복체크를 해주세요.");
         }
-       
     });
 }
 

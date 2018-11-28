@@ -52,19 +52,21 @@ def makeTeam(request):
     if request.POST:
         if ('teamName' in request.POST) and ('userId' in request.POST):
             try:
-
-                checkTeamNum = models.TeamInfo.objects.filter(
-                    userId=request.POST.get("userId")
-                )
-                if checkTeamNum.exists() and checkTeamNum.count() < 3:
+                userCount = models.UserCount.objects.get(
+                        userId=request.POST.get("userId")
+                    )
+                if userCount.teamCount < 3:
                     teamModel = models.TeamInfo(
                         teamName=request.POST.get("teamName"),
                         userId=request.POST.get("userId"),
                         leader=1
                     )
+                    userCount.teamCount += 1
+                    userCount.save()
                     teamModel.save()
                     return JsonResponse({'result': True}, safe=False)
-                return JsonResponse({'result': "teamNumOutOfRange"}, safe=False)
+                else:
+                    return JsonResponse({'result': "teamNumOutOfRange"}, safe=False)
             except IOError:
                 print("저장 실패")
                 return JsonResponse({'result': False}, safe=False)
