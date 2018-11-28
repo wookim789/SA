@@ -32,23 +32,45 @@ def planListClick(request):
                 # 플랜 페이지 수 10개씩 계산
                 planPageDivNum = pageNum(planPageNum)
 
+                # 플랜 내림차순 10개 플랜 가져오기
                 planModelObj = models.TemaPlanList.objects.filter(
                     teamName=request.POST.get("teamName")).order_by('-teamPlanNo')[:10]
 
-                planModel = serializers.serialize('json',
-                                                  planModelObj)
-                # print(planModelObj)
-                # planModel = planModel.update(
-                #     )
+                # 해당 플랜 객체 json 으로 시리얼 라이즈 
+                planModel = serializers.serialize('json', planModelObj)
+
+                # 테이블 담은 객체 삭제
+                planModelObj = None
+
+                # json 데이터 끝부분 ]자르기
+                planModel = planModel.replace("]", "")       
+
+                # 팀 선택 시 해당 팀의 권한 정보 조회
                 userAuthority = models.TeamInfo.objects.get(teamName=request.POST.get("teamName"),
                                                             userId=request.POST.get("userId"))
-                # print(planModel)
-                del request.session['planPageNum']
-                del request.session['planPageDivNum']
+                
+                result = ""
+                #json 데이터 오른쪽 끝에 해당 데이터 붙히기
+                if planModel == "[":
+                    result = '{ "model" : "onePage.teamplanlist",' + \
+                            '"pk" : "p", ' + \
+                            '"fields" : {' + \
+                                            '"planPageNum" : "' + str(planPageNum) + \
+                                            '","planPageDivNum" : "' + str(planPageDivNum) + \
+                                            '","leader" :"' + str(userAuthority.leader) + '"}}]'
+                else:
+                    result = ',{ "model" : "onePage.teamplanlist",' + \
+                                '"pk" : "p", ' + \
+                                '"fields" : {' + \
+                                                '"planPageNum" : "' + str(planPageNum) + \
+                                                '","planPageDivNum" : "' + str(planPageDivNum) + \
+                                                '","leader" :"' + str(userAuthority.leader) + '"}}]'
+                planModel += result
+                print(planModel)
+                # 이전의 권한 세션 삭제 및 갱신 -> html 문서의 hidden form 데이터 수정해야함. json 데이터에 붙힘.
                 del request.session['leader']
-                request.session['planPageNum'] = planPageNum
-                request.session['planPageDivNum'] = planPageDivNum
                 request.session['leader'] = userAuthority.leader
+
                 return JsonResponse(planModel, safe=False)
             except IOError:
                 print("db error")

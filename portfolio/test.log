@@ -6899,3 +6899,252 @@ WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
 WARNING:django.request:Not Found: /onePage/login/main.html
 WARNING:django.request:Not Found: /onePage/login/main.html
 WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+ERROR:django.request:Internal Server Error: /onePage/login/
+Traceback (most recent call last):
+  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 137, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view onePage.login.login didn't return an HttpResponse object. It returned None instead.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /onePage/login/
+Traceback (most recent call last):
+  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 137, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view onePage.login.login didn't return an HttpResponse object. It returned None instead.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+ERROR:django.request:Internal Server Error: /onePage/planListClick/
+Traceback (most recent call last):
+  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\rediron\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\rediron\Desktop\protfolio\SA\portfolio\onePage\mainPagePlan.py", line 62, in planListClick
+    '",leader" :' + userAuthority.leader + '}}]'
+TypeError: must be str, not int
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html
+WARNING:django.request:Not Found: /onePage/login/img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /onePage/img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /onePage/login/main.html

@@ -89,6 +89,8 @@ function printPlanFunctuon(teamName) {
     $("#plan-board-div").show();
     $("#plan-list-board").empty();
     //console.log($(this).text());
+    var pageNum = 1;
+    var html ="";
     $.ajax({
         url: '/onePage/planListClick/',
         type: 'POST',
@@ -101,7 +103,7 @@ function printPlanFunctuon(teamName) {
         success: function (str) {
 
             console.log("플랜 데이터 가져오기 성공");
-            var html =
+            html =
                 '<tr>' +
                 '<td id="plan-board-no">No.</td>' +
                 '<td id="plan-board-name">Plan Name</td>' +
@@ -109,18 +111,25 @@ function printPlanFunctuon(teamName) {
                 '</tr>';
             var jsonData = JSON.parse(str);
             $.each(jsonData, function (index, item) {
-                html +=
+                if(item.pk != "p"){
+                    html +=
                     '<tr>' +
                     '<th scope="row" id = plan-board-no-' + item.pk + '>' + item.pk + '</th>' +
                     '<td id = plan-board-name-content-' + item.pk + '>' + item.fields.teamPlanName + '</td>' +
                     '<td><button class ="btn btn-primary plan-delete-btn"  id = "plan-board-del-btn-' + item.pk + '" value = "' + item.pk + '">Delete Plan</button></td>' +
                     '</tr>';
+                }else if (item.pk =="p"){
+                    pageNum = item.fields.planPageNum;
+                }
             });
+
+            // 1. 페이징 2. 페이징의 페이징  3. learder session 갱신
+
             $("#session-div").load('main.html');
             $("#plan-name-head").append("<h1 id = 'h1-teamName'>" + teamName + "</h1>");
             //$("#plan-table-tr").append(html);
             
-            $("#plan-list-board").append(pagePro($("#hiidenPageNum").val(), html));
+            $("#plan-list-board").append(pagePro(pageNum, html));
             if ($("#hiddenUserLeader").val() != "1") {
                 $(".plan-delete-btn").attr("disabled", "disabled");
             }
