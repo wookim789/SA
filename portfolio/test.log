@@ -9393,3 +9393,52 @@ WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
 WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
 WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
 WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet []>
+DEBUG:root:<QuerySet [<SelectDate: SelectDate object (211)>]>
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /lib/php-mail-form/loading.gif
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio02.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio03.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio06.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio04.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio05.jpg
+WARNING:django.request:Not Found: /img/portfolio/folio01.jpg
